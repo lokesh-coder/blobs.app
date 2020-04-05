@@ -7,7 +7,15 @@
     "build": "webpack ---config ./config/webpack.prod.config.js",
     "dev": "webpack-dev-server --config ./config/webpack.dev.config.js"
   },
-  "keywords": [],
+  "keywords": [
+    "react", 
+    "boilerplate", 
+    "webpack", 
+    "webpack hmr", 
+    "travis",
+    "react-simple-boilerplate",
+    "react-boilerplate"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
