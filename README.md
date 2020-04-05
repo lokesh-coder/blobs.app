@@ -1,4 +1,4 @@
-# Instructions
+# Getting Started
 
 - Install npm packages using `yarn install`
 
