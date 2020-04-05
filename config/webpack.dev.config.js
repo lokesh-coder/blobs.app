@@ -10,7 +10,8 @@ module.exports = {
     devtool: 'eval-source-map',
     output: {
         path: paths.output,
-        filename: '[name].bundle.js'
+        filename: '[name].bundle.js',
+        pathinfo: false,
     },
     module: {
         rules: [
@@ -30,7 +31,6 @@ module.exports = {
     ],
     devServer: {
         contentBase: paths.output,
-        compress: true,
         port: 9000,
         hot: true,
     }
