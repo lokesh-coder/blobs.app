@@ -1,9 +1,11 @@
 --- 
 before_script: 
-  - "yarn install --frozen-lockfile"
+  - "yarn"
 cache: ~
 language: node_js
 node_js: 
   - "10.16.3"
-script: "npm run build"
+script: 
+  - "npm run lint"
+  - "npm run build"
 yarn: false

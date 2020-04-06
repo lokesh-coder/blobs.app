@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack ---config ./config/webpack.prod.config.js",
-    "dev": "webpack-dev-server --config ./config/webpack.dev.config.js"
+    "dev": "webpack-dev-server --config ./config/webpack.dev.config.js",
+    "lint": "./node_modules/.bin/eslint src/*.jsx"
   },
   "keywords": [
-    "react", 
-    "boilerplate", 
-    "webpack", 
-    "webpack hmr", 
+    "react",
+    "boilerplate",
+    "webpack",
+    "webpack hmr",
     "travis",
     "react-simple-boilerplate",
     "react-boilerplate"
@@ -30,6 +31,12 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "html-webpack-plugin": "^4.0.4",
     "webpack-dev-server": "^3.10.3"
   }
