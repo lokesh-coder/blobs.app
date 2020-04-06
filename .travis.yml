@@ -1,6 +1,6 @@
 --- 
 before_script: 
-  - "yarn install"
+  - "yarn"
 cache: ~
 language: node_js
 node_js: 
