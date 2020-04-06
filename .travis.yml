@@ -1,6 +1,6 @@
 --- 
 before_script: 
-  - "yarn install --frozen-lockfile"
+  - "yarn install"
 cache: ~
 language: node_js
 node_js: 
