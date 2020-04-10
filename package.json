@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack ---config ./config/webpack.prod.config.js",
     "dev": "webpack-dev-server --config ./config/webpack.dev.config.js",
-    "lint": "./node_modules/.bin/eslint src/*.jsx"
+    "lint": "./node_modules/.bin/eslint src/*.jsx",
+    "test": "jest"
   },
   "keywords": [
     "react",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^10.0.2",
+    "@testing-library/jest-dom": "^5.5.0",
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
@@ -39,6 +41,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "html-webpack-plugin": "^4.0.4",
+    "jest": "^25.3.0",
     "webpack-dev-server": "^3.10.3"
   }
 }
