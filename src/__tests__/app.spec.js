@@ -1,5 +1,5 @@
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import React from 'react';
+import { render } from 'test-utils';
 import App from '../app.jsx';
 
 it('should take a snapshot', () => {
