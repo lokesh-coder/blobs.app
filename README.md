@@ -9,3 +9,6 @@ A simple react boilerplate with webpack hmr and latest babel packages. It comes 
 
 - Run in build mode
     `npm run build`
+    
+- Run test cases
+    `npm run test`
