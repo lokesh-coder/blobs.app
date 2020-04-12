@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack ---config ./config/webpack.prod.config.js",
     "dev": "webpack-dev-server --config ./config/webpack.dev.config.js",
-    "lint": "./node_modules/.bin/eslint src/*.jsx",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx src/",
     "test": "jest"
   },
   "keywords": [
