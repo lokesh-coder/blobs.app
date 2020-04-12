@@ -8,6 +8,5 @@ node_js:
 script: 
   - "npm run lint"
   - "npm run test"
-  if: branch = master
   - "npm run build"
 yarn: false
