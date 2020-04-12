@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const paths = require('./paths');
 
@@ -27,6 +28,10 @@ module.exports = {
             template: paths.template,
             hash: true,
             title: 'Boilerplate',
+        }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static',
+            defaultSizes: 'gzip'
         }),
     ]
 }
