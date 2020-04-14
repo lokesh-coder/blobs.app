@@ -1,5 +1,5 @@
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const paths = require('./paths');
 
 module.exports = {
@@ -19,6 +19,18 @@ module.exports = {
                 test: /(.js|.jsx)/,
                 exclude: /(node_modules|bower_components)/,
                 use: 'babel-loader',
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                  'style-loader',
+                  'css-loader',
+                  'sass-loader',
+                ],
+            },
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
             }
         ]
     },
@@ -28,7 +40,14 @@ module.exports = {
             hash: true,
             title: 'Boilerplate',
         }),
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            chunkFilename: '[id].css'
+        })
     ],
+    resolve: {
+        extensions: ['.js', 'jsx', '.scss', '.css']
+    },
     devServer: {
         contentBase: paths.output,
         port: 9000,
