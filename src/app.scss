@@ -1,0 +1,9 @@
+$bg-color: grey;
+$txt-color: white;
+
+.App--Container {
+    display: flex;
+    flex: 1;
+    background: $bg-color;
+    color: $txt-color;
+}
