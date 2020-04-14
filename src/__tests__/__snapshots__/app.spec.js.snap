@@ -2,7 +2,9 @@
 
 exports[`should take a snapshot 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="App--Container"
+  >
     Welcome to React Boilerplate!
   </div>
 </DocumentFragment>
