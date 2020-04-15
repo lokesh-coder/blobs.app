@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App--Container">
       <p className="App--Title">Welcome To React Boilerplate</p>
-      <img src={logo} className="App--Image" />
+      <img src={logo} alt="React Logo" className="App--Image" />
     </div>
   );
 }
