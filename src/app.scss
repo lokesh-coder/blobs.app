@@ -11,13 +11,18 @@ body {
     flex: 1;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: $bg-color;
     color: $txt-color;
     padding: 0;
     margin: 0;
     color: $primary-color;
-}
 
-.App--Image {
-    height: 200px;
+    .App--Image {
+        height: 200px;
+    }
+
+    .App--Title {
+        font-size: 2rem;
+    }
 }
