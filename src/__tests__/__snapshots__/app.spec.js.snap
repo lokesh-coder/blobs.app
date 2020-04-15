@@ -5,7 +5,15 @@ exports[`should take a snapshot 1`] = `
   <div
     class="App--Container"
   >
-    Welcome to React Boilerplate!
+    <p
+      class="App--Title"
+    >
+      Welcome To React Boilerplate
+    </p>
+    <img
+      class="App--Image"
+      src=""
+    />
   </div>
 </DocumentFragment>
 `;
