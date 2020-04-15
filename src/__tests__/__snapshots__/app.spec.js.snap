@@ -11,6 +11,7 @@ exports[`should take a snapshot 1`] = `
       Welcome To React Boilerplate
     </p>
     <img
+      alt="React Logo"
       class="App--Image"
       src=""
     />
