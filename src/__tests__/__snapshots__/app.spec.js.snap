@@ -8,7 +8,7 @@ exports[`should take a snapshot 1`] = `
     <p
       class="App--Title"
     >
-      Welcome To React Boilerplate
+      Welcome To React Boilerplate!
     </p>
     <img
       alt="React Logo"
