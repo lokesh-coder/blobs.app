@@ -1,9 +1,28 @@
-$bg-color: grey;
+$bg-color: #282b33;
 $txt-color: white;
+$primary-color: #61dbfc;
+
+body {
+    margin: 0px;
+}
 
 .App--Container {
     display: flex;
     flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: $bg-color;
     color: $txt-color;
+    padding: 0;
+    margin: 0;
+    color: $primary-color;
+
+    .App--Image {
+        height: 200px;
+    }
+
+    .App--Title {
+        font-size: 2rem;
+    }
 }
