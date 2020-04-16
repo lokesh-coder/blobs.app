@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
-import App from './src/app.jsx';
+import Loader from 'uielements/loader/loader.component';
+const App = React.lazy(() => import('./src/app'));
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Suspense fallback={<Loader />}><App /></Suspense>, document.getElementById('root'));
