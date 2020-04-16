@@ -53,7 +53,7 @@ module.exports = function({ plugins }) {
             }),
         ],
         resolve: {
-            extensions: ['.js', 'jsx', '.scss', '.css'],
+            extensions: ['.js', '.jsx', '.scss', '.css'],
             alias: {
                 uielements: paths.uielements,
             }
