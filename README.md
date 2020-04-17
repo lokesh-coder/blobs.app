@@ -12,3 +12,6 @@ A simple react boilerplate with webpack hmr and latest babel packages. It comes 
     
 - Run test cases
     `npm run test`
+
+## Want To Submit A PR?
+Refer [Contributing.md](https://github.com/udaypydi/react-simple-boilerplate/blob/master/CONTRIBUTING.md)

@@ -2,7 +2,8 @@
 
 Install the latest [npm](https://docs.npmjs.com/).
 
-Fork the respository, then clone it
+Clone the repository:
+
 ```
 $ git@github.com:udaypydi/react-simple-boilerplate.git && cd react-simple-boilerplate
 $ yarn
