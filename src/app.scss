@@ -20,8 +20,8 @@ body {
 
     .App--Image {
         height: 200px;
-        animation: rotation 10s infinite;
-        -webkit-animation:rotation 10s infinite;
+        animation: rotation 10s infinite linear;
+        -webkit-animation:rotation 10s infinite linear;
     }
 
     .App--Title {
