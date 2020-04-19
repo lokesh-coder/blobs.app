@@ -35,10 +35,12 @@
 
 
 ### Installing
+- Clone the Repository `git clone https://github.com/udaypydi/react-simple-boilerplate.git`
+
 - Install npm packages using `yarn install`
 
 - Run in dev mode
-    `npm run dev`
+    `npm run dev` 
 
 - Run in build mode
     `npm run build`
