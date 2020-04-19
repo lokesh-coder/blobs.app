@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 * [node](https://nodejs.org/en/download/) 
 
 
-## Installation
+### Installing
 - Install npm packages using `yarn install`
 
 - Run in dev mode
