@@ -20,7 +20,7 @@
     "react-boilerplate"
   ],
   "author": "Uday Bhaskhar",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
