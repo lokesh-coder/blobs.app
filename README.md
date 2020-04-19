@@ -2,6 +2,7 @@
 
 > A simple react boilerplate with webpack hmr and latest babel packages. It comes with inbuilt [Travis-CI](https://travis-ci.org/) for PR checks, lint checks and builds.
 
+[![TravisCI](https://img.shields.io/travis/udaypydi/react-simple-boilerplate)](https://travis-ci.org/github/udaypydi/react-simple-boilerplate/builds)
 [![License](https://img.shields.io/github/license/udaypydi/react-simple-boilerplate)](https://github.com/udaypydi/react-simple-boilerplate/blob/master/LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/udaypydi/react-simple-boilerplate/blob/master/CONTRIBUTING.md) ![](https://img.shields.io/travis/udaypydi/react-simple-boilerplate)
 
