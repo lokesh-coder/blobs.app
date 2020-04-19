@@ -20,9 +20,23 @@ body {
 
     .App--Image {
         height: 200px;
+        animation: rotation 10s infinite linear;
+        -webkit-animation:rotation 10s infinite linear;
     }
 
     .App--Title {
         font-size: 2rem;
     }
 }
+
+@keyframes rotation {
+   from { 
+       -webkit-transform:rotate(0deg); 
+       transform: rotate(0deg);
+    }
+   to   { 
+       -webkit-transform:rotate(359deg); 
+       transform: rotate(359deg);
+   }
+}
+
