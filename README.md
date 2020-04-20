@@ -24,6 +24,7 @@
         </a>
     </div>
 </div>
+
  A simple react boilerplate with webpack hmr and latest babel packages. It comes with inbuilt [Travis-CI](https://travis-ci.org/) for PR checks, lint checks and builds.
 
 ## Getting Started
