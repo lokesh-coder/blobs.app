@@ -1,11 +1,34 @@
-# [React Boilerplate](http://react-simple-boilerplate.surge.sh/) 
+<div align="center">
+    <a href="http://react-simple-boilerplate.surge.sh/">
+        <h1>React Boilerplate</h1>
+    </a>
+</div>
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/udaypydi/react-simple-boilerplate/blob/master/CONTRIBUTING.md) ![](https://img.shields.io/travis/udaypydi/react-simple-boilerplate)
+<div align="center">
+    <strong>Start your next react project in seconds</strong>
+    <br />
+    <div>
+        <!-- travis -->
+        <a href="https://travis-ci.org/udaypydi/react-simple-boilerplate">
+            <img src="https://travis-ci.org/udaypydi/react-simple-boilerplate.svg" alt="Test Coverage" />
+        </a>
+        <!-- last commit -->
+        <img src="https://img.shields.io/github/last-commit/udaypydi/react-simple-boilerplate">
+        <!-- Mit License -->
+        <a href="https://github.com/udaypydi/react-simple-boilerplate/blob/master/LICENSE">
+            <img src="https://img.shields.io/github/license/udaypydi/react-simple-boilerplate">
+        </a>
+        <!-- Pr's -->
+        <a href="https://github.com/udaypydi/react-simple-boilerplate/blob/master/CONTRIBUTING.md"> 
+        <img src="https://img.shields.io/badge/PRs-welcome-blueviolet.svg">
+        </a>
+    </div>
+</div>
 
-A simple react boilerplate with webpack hmr and latest babel packages. It comes with inbuilt [Travis-CI](https://travis-ci.org/) for PR checks, lint checks and builds.
+ A simple react boilerplate with webpack hmr and latest babel packages. It comes with inbuilt [Travis-CI](https://travis-ci.org/) for PR checks, lint checks and builds.
 
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+<i>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.</i>
 
 ### Prerequisites
 * [yarn](https://classic.yarnpkg.com/en/docs/install/)
@@ -13,10 +36,12 @@ These instructions will get you a copy of the project up and running on your loc
 
 
 ### Installing
+- Clone the Repository `git clone https://github.com/udaypydi/react-simple-boilerplate.git`
+
 - Install npm packages using `yarn install`
 
 - Run in dev mode
-    `npm run dev`
+    `npm run dev` 
 
 - Run in build mode
     `npm run build`
