@@ -1,6 +1,6 @@
 <div align="center">
     <a href="http://react-simple-boilerplate.surge.sh/">
-        <h1>React Boilerplate</h1>
+        <h1>React Simple Boilerplate</h1>
     </a>
 </div>
 
@@ -12,6 +12,7 @@
         <a href="https://travis-ci.org/udaypydi/react-simple-boilerplate">
             <img src="https://travis-ci.org/udaypydi/react-simple-boilerplate.svg" alt="Test Coverage" />
         </a>
+        <img src="https://img.shields.io/github/package-json/v/udaypydi/react-simple-boilerplate">
         <!-- last commit -->
         <img src="https://img.shields.io/github/last-commit/udaypydi/react-simple-boilerplate">
         <!-- Mit License -->
