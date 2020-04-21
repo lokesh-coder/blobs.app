@@ -1,6 +1,6 @@
 <div align="center">
     <a href="http://react-simple-boilerplate.surge.sh/">
-        <h1>React Boilerplate</h1>
+        <h1>React Simple Boilerplate</h1>
     </a>
 </div>
 
