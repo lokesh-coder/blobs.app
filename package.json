@@ -7,7 +7,8 @@
     "build": "npm run build:css && webpack ---config ./config/webpack.prod.config.js",
     "dev": "npm run watch:css && webpack-dev-server --config ./config/webpack.dev.config.js --open",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx src/",
-    "build:css": "postcss src/assets/css/styles.css -o src/assets/css/main.css", 
+    "lint: fix": "./node_modules/.bin/eslint --ext .js,.jsx src/ --fix",
+    "build:css": "postcss src/assets/css/styles.css -o src/assets/css/main.css",
     "watch:css": "postcss src/assets/css/styles.css -o src/assets/css/main.css",
     "test": "jest --collect-coverage",
     "test:watch": "jest --watch"
@@ -30,6 +31,7 @@
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
     "postcss-cli": "^7.1.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "tailwindcss": "^1.3.4",
