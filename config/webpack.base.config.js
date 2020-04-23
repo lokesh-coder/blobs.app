@@ -56,6 +56,7 @@ module.exports = function({ plugins }) {
             extensions: ['.js', '.jsx', '.scss', '.css'],
             alias: {
                 uielements: paths.uielements,
+                assets: paths.assets,
             }
         },
     });

@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from './logo.png';
 import Button from 'uielements/button/button.component';
+import 'assets/css/main.css';
 import './app.scss';
-import './main.css';
+
 
 export default function App() {
   return (
