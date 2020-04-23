@@ -2,4 +2,3 @@ node_modules/
 build/
 .gitignore
 coverage/
-src/assets/css/main.css
