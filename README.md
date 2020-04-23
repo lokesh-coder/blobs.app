@@ -12,9 +12,6 @@
         <a href="https://travis-ci.org/udaypydi/react-simple-boilerplate">
             <img src="https://travis-ci.org/udaypydi/react-simple-boilerplate.svg" alt="Test Coverage" />
         </a>
-        <img src="https://img.shields.io/github/package-json/v/udaypydi/react-simple-boilerplate">
-        <!-- last commit -->
-        <img src="https://img.shields.io/github/last-commit/udaypydi/react-simple-boilerplate">
         <!-- Mit License -->
         <a href="https://github.com/udaypydi/react-simple-boilerplate/blob/master/LICENSE">
             <img src="https://img.shields.io/github/license/udaypydi/react-simple-boilerplate">
