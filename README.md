@@ -20,6 +20,7 @@
         <a href="https://github.com/udaypydi/react-simple-boilerplate/blob/master/CONTRIBUTING.md"> 
         <img src="https://img.shields.io/badge/PRs-welcome-blueviolet.svg">
         </a>
+        <img src="https://img.shields.io/snyk/vulnerabilities/github/udaypydi/react-simple-boilerplate" />
     </div>
 </div>
 
