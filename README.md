@@ -23,7 +23,7 @@
     </div>
 </div>
 
- A simple react boilerplate with webpack hmr and latest babel packages. It comes with inbuilt [Travis-CI](https://travis-ci.org/) for PR checks, lint checks and builds.
+ A simple react boilerplate with webpack hmr and latest babel packages. It comes with inbuilt [Travis-CI](https://travis-ci.org/) for PR checks, lint checks and builds. Kick start the development with tailwind css, react hooks and much more.
 
 ## Getting Started
 <i>These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.</i>
