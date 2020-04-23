@@ -28,7 +28,7 @@ module.exports = function({ plugins }) {
                 },
                 {
                     test: /\.css$/i,
-                    use: ['style-loader', 'css-loader'],
+                    use: ['style-loader', 'css-loader', 'postcss-loader'],
                 },
                 {
                     test: /\.(png|jpe?g|gif)$/i,
@@ -56,6 +56,7 @@ module.exports = function({ plugins }) {
             extensions: ['.js', '.jsx', '.scss', '.css'],
             alias: {
                 uielements: paths.uielements,
+                assets: paths.assets,
             }
         },
     });

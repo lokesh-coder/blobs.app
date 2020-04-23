@@ -7,6 +7,14 @@ module.exports = {
     'plugin:react/recommended',
     'airbnb',
   ],
+  settings: {
+    "import/resolver": {
+      node: {
+          extensions: ['.js', '.jsx', '.scss', '.css'],
+          moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
