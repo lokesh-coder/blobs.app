@@ -1,15 +1,16 @@
-import React from 'react';
-import Button from 'uielements/button/button.component';
-import logo from './logo.png';
-import 'assets/css/main.css';
-import './app.scss';
+import React, { useEffect } from "react";
+import { store, autoEffect } from "@risingstack/react-easy-state";
+import "antd/dist/antd.css";
+import "assets/css/main.css";
+import "./app.scss";
+import Grid from "./components/layout/grid";
+import { appStore } from "./store";
+import animator from "./services/animator";
+
+autoEffect(() => {
+  animator(appStore.path);
+});
 
 export default function App() {
-  return (
-    <div className="bg-blue-900 flex flex-col justify-center items-center p-20">
-      <p className="text-4xl text-blue-100">Welcom To React Boilerplate!</p>
-      <img src={logo} className="app--image" alt="logo" />
-      <Button buttonText="Get Started!" />
-    </div>
-  );
+  return <Grid />;
 }

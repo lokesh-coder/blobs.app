@@ -1,5 +1,21 @@
-.app--image {
-    height: 200px;
-    animation: rotation 10s infinite linear;
-    -webkit-animation:rotation 10s infinite linear;
+#blob {
+  fill: #b33771;
+}
+
+.ant-slider-step {
+  background: rgba(179, 55, 113, 0.16);
+}
+
+.ant-slider-handle {
+  border: solid 3px #b33771;
+  width: 24px;
+  height: 24px;
+  margin-top: -9px;
+  &:focus,
+  &.ant-tooltip-open {
+    border-color: #6d214f;
+  }
+}
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+  border-color: #6d214f;
 }
