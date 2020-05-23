@@ -1,7 +1,7 @@
 const generator = ({ size = 400, growth = 6, edges = 6 } = {}) => {
-  var points = _createPoints(size, growth, edges);
-  var svgPath = _createSvgPath(points);
-  return svgPath;
+  var { destPoints, id } = _createPoints(size, growth, edges);
+  var path = _createSvgPath(destPoints);
+  return { path, id };
 };
 
 const _toRad = (deg) => deg * (Math.PI / 180.0);
@@ -57,7 +57,7 @@ const _createPoints = (size, minGrowth, edgesCount) => {
 
   let slices = _divide(edgesCount);
   let maxRandomValue = _shuffle([99, 999, 9999, 99999, 999999])[0];
-  let id = Math.random() * maxRandomValue;
+  let id = Math.floor(Math.random() * maxRandomValue);
   let seedValue = id;
   let randVal = _randomDoubleGenerator(seedValue);
   let destPoints = [];
@@ -67,7 +67,7 @@ const _createPoints = (size, minGrowth, edgesCount) => {
     let end = _point(center, O, degree);
     destPoints.push(end);
   });
-  return destPoints;
+  return { destPoints, id };
 };
 
 const _createSvgPath = (points) => {

@@ -12,6 +12,18 @@ export default function Settings() {
       <SettingsItem label="Minumum growth size">
         <GrowthSlider />
       </SettingsItem>
+      <ul className="flex justify-around my-8">
+        <li className="flex font-medium">
+          <i className="ri-flutter-fill text-base mr-1" /> Package
+        </li>
+        <li className="flex font-medium">
+          <i className="ri-github-fill text-base mr-1" /> Github
+        </li>
+        <li className="flex font-medium">
+          <i className="ri-twitter-line text-base mr-1" />
+          Share
+        </li>
+      </ul>
     </div>
   );
 }

@@ -3,3 +3,5 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+@import "../icons/remixicon.css";

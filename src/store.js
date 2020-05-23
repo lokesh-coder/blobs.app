@@ -6,6 +6,7 @@ const appStore = store({
   growth: 6,
   size: 500,
   path: "",
+  id: "",
 });
 
 export { appStore };

@@ -15682,6 +15682,10 @@ video {
   transition-delay: 1000ms;
 }
 
+@import "../icons/remixicon.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Ropa+Sans:ital@0;1&display=swap");
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;

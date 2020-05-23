@@ -1,21 +1,48 @@
+.brand-bg {
+  margin-top: -16px;
+  transform: translate(-50%, 0);
+  margin-left: 50%;
+}
+
 #blob {
-  fill: #b33771;
+  fill: #d1d8e0;
 }
 
 .ant-slider-step {
-  background: rgba(179, 55, 113, 0.16);
+  background: rgb(209, 216, 224);
 }
 
 .ant-slider-handle {
-  border: solid 3px #b33771;
+  border: solid 3px #4e566b;
   width: 24px;
   height: 24px;
   margin-top: -9px;
   &:focus,
   &.ant-tooltip-open {
-    border-color: #6d214f;
+    border-color: #303749;
   }
 }
 .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
-  border-color: #6d214f;
+  border-color: #303749;
+}
+
+.ant-modal-mask {
+  background-color: rgba(182, 170, 176, 0.84);
+}
+
+.ant-modal-content {
+  border-radius: 11px;
+}
+
+.ant-tooltip-inner {
+  border-radius: 4px;
+  font-size: 11px;
+  color: #ffffffd6;
+  background: #2f3143;
+}
+
+pre > code {
+  overflow: auto;
+  width: 100%;
+  display: inline-block;
 }

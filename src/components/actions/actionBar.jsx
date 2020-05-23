@@ -5,7 +5,7 @@ import Randomizer from "./randomizer";
 
 export default function ActionBar(onClick) {
   return (
-    <div>
+    <div className="flex justify-center">
       <SVGCopy />
       <Randomizer />
       <FlutterCopy />

@@ -7,12 +7,13 @@ import animator from "../../services/animator";
 
 const Randomizer = view(() => {
   const changeBlob = () => {
-    const svgPath = generator({
+    const { path, id } = generator({
       edges: appStore.edges,
       growth: appStore.growth,
       size: appStore.size,
     });
-    appStore.path = svgPath;
+    appStore.path = path;
+    appStore.id = id;
   };
   changeBlob();
   return <Button label="Randomizer" onClick={changeBlob} />;

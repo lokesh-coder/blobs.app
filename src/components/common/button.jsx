@@ -1,12 +1,27 @@
 import React from "react";
+import Tooltip from "antd/lib/tooltip";
 
-export default function Button({ label, onClick }) {
+export default function Button({
+  label,
+  onClick,
+  children,
+  tooltipText,
+  isPrimary = true,
+}) {
+  let classNames = "";
+  if (isPrimary) {
+    classNames = "shadow-lg bg-theme-400 text-white hover:bg-theme-900";
+  } else {
+    classNames = "text-theme-600";
+  }
   return (
-    <button
-      className="bg-theme-900 text-white px-6 py-3 rounded-md text-base font-medium focus:outline-none hover:bg-theme-400 mx-2"
-      onClick={onClick}
-    >
-      {label}
-    </button>
+    <Tooltip title={tooltipText}>
+      <button
+        className={`px-6 py-3 rounded-md text-base font-medium focus:outline-none mx-2  ${classNames}`}
+        onClick={onClick}
+      >
+        {label || children}
+      </button>
+    </Tooltip>
   );
 }
