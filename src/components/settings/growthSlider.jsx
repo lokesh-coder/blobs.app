@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "antd/lib/slider";
+import { Slider } from "antd";
 import { appStore } from "../../store";
 
 export default function GrowthSlider() {

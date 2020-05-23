@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DefaultModal from "antd/lib/modal";
+import { Modal as DefaultModal } from "antd";
 import Button from "./button";
 
 export default function Modal({ isOpen, children, onClose }) {

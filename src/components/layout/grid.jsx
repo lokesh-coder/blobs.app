@@ -10,16 +10,16 @@ export default function Grid() {
     <div className="app bg-gray-100">
       <div className="flex flex-col w-full max-w-screen-xl mx-auto px-6 min-h-screen">
         <Header />
-        <div className="flex flex-1">
-          <div className="w-9/12 flex flex-col items-center justify-center">
-            <div>
+        <div className="md:flex flex-1">
+          <div className="md:w-9/12 flex flex-col items-center justify-center">
+            <div className="flex flex-1 w-full items-center flex-col">
               <Blob />
               <div className="py-10">
                 <ActionBar />
               </div>
             </div>
           </div>
-          <div className="w-3/12 flex items-center">
+          <div className="md:w-3/12 flex items-center">
             <div className="flex-1">
               <Settings />
             </div>

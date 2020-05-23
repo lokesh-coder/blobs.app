@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { store, autoEffect } from "@risingstack/react-easy-state";
-import "antd/dist/antd.css";
 import "assets/css/main.css";
 import "./app.scss";
 import Grid from "./components/layout/grid";
