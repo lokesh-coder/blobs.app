@@ -1,7 +1,7 @@
 {
-  "name": "react-simple-boilerplate",
+  "name": "blobs.app",
   "version": "1.0.0",
-  "description": "Simple react boilerplate with support for travis ci, webpack, sass etc.",
+  "description": "Generate blob shapes for Eeb and Fluttter",
   "main": "index.js",
   "scripts": {
     "build": "npm run build:css && webpack ---config ./config/webpack.prod.config.js",
@@ -14,15 +14,9 @@
     "test:watch": "jest --watch"
   },
   "keywords": [
-    "react",
-    "boilerplate",
-    "webpack",
-    "webpack hmr",
-    "travis",
-    "react-simple-boilerplate",
-    "react-boilerplate"
+    "blobs"
   ],
-  "author": "Uday Bhaskhar",
+  "author": "Lokesh Rajendran",
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.9.0",
