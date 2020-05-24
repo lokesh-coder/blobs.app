@@ -19,6 +19,7 @@ html body {
 
   .ant-slider-handle {
     border: solid 3px #4e566b;
+    background-color: #f7fafc;
     width: 24px;
     height: 24px;
     margin-top: -9px;
@@ -32,7 +33,7 @@ html body {
   }
 
   .ant-modal-mask {
-    background-color: rgba(182, 170, 176, 0.84);
+    background-color: rgba(78, 86, 107, 0.71);
   }
 
   .ant-modal-content {
@@ -44,6 +45,11 @@ html body {
     font-size: 11px;
     color: #ffffffd6;
     background: #2f3143;
+  }
+
+  .ant-popover-inner {
+    max-width: 300px;
+    border-radius: 4px;
   }
 
   pre > code {

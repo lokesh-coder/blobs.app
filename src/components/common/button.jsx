@@ -10,7 +10,8 @@ export default function Button({
 }) {
   let classNames = "";
   if (isPrimary) {
-    classNames = "shadow-lg bg-theme-400 text-white hover:bg-theme-900";
+    classNames =
+      "shadow-lg bg-theme-400 text-white hover:bg-theme-900 transition duration-200 ease-in-out transform active:shadow-2xl active:translate-y-1";
   } else {
     classNames = "text-theme-600";
   }

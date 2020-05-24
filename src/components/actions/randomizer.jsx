@@ -16,6 +16,6 @@ const Randomizer = view(() => {
     appStore.id = id;
   };
   changeBlob();
-  return <Button label="Randomizer" onClick={changeBlob} />;
+  return <Button label="Change" onClick={changeBlob} />;
 });
 export default Randomizer;

@@ -17,6 +17,10 @@ module.exports = {
     },
   },
   purge: ["./src/**/*.html", "./src/**/*.jsx"],
-  variants: {},
+  variants: {
+    boxShadow: ["responsive", "hover", "focus", "active"],
+    translate: ["responsive", "hover", "focus", "active"],
+    transitionProperty: ["responsive", "hover", "focus", "active"],
+  },
   plugins: [],
 };

@@ -52,7 +52,7 @@ module.exports = function ({ plugins }) {
       new HtmlWebpackPlugin({
         template: paths.template,
         hash: true,
-        title: "Boilerplate",
+        title: "Blobs for web and flutter",
       }),
       new MiniCssExtractPlugin({
         filename: "[name].[hash].css",
@@ -62,7 +62,7 @@ module.exports = function ({ plugins }) {
     resolve: {
       extensions: [".js", ".jsx", ".scss", ".css"],
       alias: {
-        uielements: paths.uielements,
+        components: paths.components,
         assets: paths.assets,
       },
     },
