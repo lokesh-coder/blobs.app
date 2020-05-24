@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const paths = require("./paths");
 
 module.exports = function ({ plugins }) {
@@ -57,6 +58,9 @@ module.exports = function ({ plugins }) {
       new MiniCssExtractPlugin({
         filename: "[name].[hash].css",
         chunkFilename: "[id].[hash].css",
+      }),
+      new CopyPlugin({
+        patterns: [{ from: "src/assets/favicons", to: "favicons" }],
       }),
     ],
     resolve: {
