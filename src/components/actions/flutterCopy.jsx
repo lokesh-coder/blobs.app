@@ -14,7 +14,7 @@ const FlutterCopy = view(({ onClose }) => {
   /// add hash widget
   Container(
     child: Blob.fromHash(
-      hash: [${appStore.edges}-${appStore.growth}-${appStore.id}],
+      hash: ['${appStore.edges}-${appStore.growth}-${appStore.id}'],
       size: 400,
     ),
   ),
