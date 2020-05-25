@@ -60,7 +60,10 @@ module.exports = function ({ plugins }) {
         chunkFilename: "[id].[hash].css",
       }),
       new CopyPlugin({
-        patterns: [{ from: "src/assets/favicons", to: "favicons" }],
+        patterns: [
+          { from: "src/assets/favicons", to: "favicons" },
+          { from: "src/assets/posters", to: "posters" },
+        ],
       }),
     ],
     resolve: {

@@ -9,6 +9,7 @@ export default function GrowthSlider() {
       min={2}
       max={9}
       included={false}
+      reverse
       onAfterChange={(value) => {
         appStore.growth = value;
       }}

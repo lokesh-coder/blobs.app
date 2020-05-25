@@ -11,7 +11,9 @@ export default function EdgesSlider() {
       included={false}
       onAfterChange={(value) => {
         appStore.edgesPrev = appStore.edges;
-        appStore.edges = value;
+        setTimeout(() => {
+          appStore.edges = value;
+        }, 10);
       }}
     />
   );

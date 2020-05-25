@@ -4,6 +4,7 @@ import Button from "../common/button";
 import { appStore } from "../../store";
 import Modal from "../common/modal";
 import Highlight from "../common/highlight";
+import Copy from "../common/ copy";
 
 const SVGCopy = view(({ onClose }) => {
   const [isModalOpen, openModal] = useState(false);
@@ -24,6 +25,9 @@ const SVGCopy = view(({ onClose }) => {
         <i className="ri-code-s-slash-fill inline-block transform scale-150"></i>
       </Button>
       <Modal isOpen={isModalOpen} onClose={() => openModal(false)}>
+        <div className="flex justify-end">
+          <Copy text={code} />
+        </div>
         <Highlight code={code} lang={"markup"} />
       </Modal>
     </>

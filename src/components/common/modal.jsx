@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Modal as DefaultModal } from "antd";
 import Button from "./button";
+import Copy from "./ copy";
 
 export default function Modal({ isOpen, children, onClose }) {
   return (
