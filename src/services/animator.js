@@ -1,5 +1,4 @@
 import * as dynamics from "dynamics.js";
-import { appStore } from "../store";
 
 export default function animator(path, id = "blob") {
   const element = document.getElementById(id);

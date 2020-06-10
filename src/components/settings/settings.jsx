@@ -3,6 +3,7 @@ import SettingsItem from "../common/settingsItem";
 import EdgesSlider from "./edgesSlider";
 import GrowthSlider from "./growthSlider";
 import Links from "./links";
+import ColorPicker from "./colorPicker";
 
 export default function Settings() {
   const edgeInfo =
@@ -16,6 +17,10 @@ export default function Settings() {
       </SettingsItem>
       <SettingsItem label="Complexity" info={edgeInfo}>
         <EdgesSlider />
+      </SettingsItem>
+
+      <SettingsItem label="Color">
+        <ColorPicker />
       </SettingsItem>
       <Links />
     </div>

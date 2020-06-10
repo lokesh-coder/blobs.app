@@ -4,7 +4,7 @@ import Button from "../common/button";
 import { appStore } from "../../store";
 import Modal from "../common/modal";
 import Highlight from "../common/highlight";
-import Copy from "../common/ copy";
+import Copy from "../common/copy";
 
 const FlutterCopy = view(({ onClose }) => {
   const [isModalOpen, openModal] = useState(false);

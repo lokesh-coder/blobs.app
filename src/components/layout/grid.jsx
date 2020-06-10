@@ -7,20 +7,22 @@ import Settings from "../settings/settings";
 
 export default function Grid() {
   return (
-    <div className="app bg-gray-100">
+    <div className="app">
       <div className="flex flex-col w-full max-w-screen-xl mx-auto px-6 min-h-screen">
-        <Header />
         <div className="md:flex flex-1">
           <div className="md:w-9/12 flex flex-col items-center justify-center">
-            <div className="flex flex-1 w-full items-center flex-col">
-              <Blob />
-              <div className="py-10">
-                <ActionBar />
+            <div className="flex flex-1 w-full justify-center flex-col">
+              <div className="flex flex-col items-center">
+                <Blob />
+                <div className="py-10">
+                  <ActionBar />
+                </div>
               </div>
             </div>
           </div>
           <div className="md:w-3/12 flex items-center">
             <div className="flex-1">
+              <Header />
               <Settings />
             </div>
           </div>

@@ -11,7 +11,7 @@ const Blob = view(() => {
       width={`100%`}
       id="blobSvg"
     >
-      <path id="blob" d={appStore.path} />
+      <path id="blob" d={appStore.path} fill={appStore.color} />
     </svg>
   );
 });
