@@ -6431,7 +6431,7 @@ video {
   clear: none;
 }
 
-.font-manrope {
+.font-body {
   font-family: Manrope;
 }
 
@@ -26377,7 +26377,7 @@ video {
     clear: none;
   }
 
-  .sm\:font-manrope {
+  .sm\:font-body {
     font-family: Manrope;
   }
 
@@ -46322,7 +46322,7 @@ video {
     clear: none;
   }
 
-  .md\:font-manrope {
+  .md\:font-body {
     font-family: Manrope;
   }
 
@@ -66267,7 +66267,7 @@ video {
     clear: none;
   }
 
-  .lg\:font-manrope {
+  .lg\:font-body {
     font-family: Manrope;
   }
 
@@ -86212,7 +86212,7 @@ video {
     clear: none;
   }
 
-  .xl\:font-manrope {
+  .xl\:font-body {
     font-family: Manrope;
   }
 

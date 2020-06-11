@@ -6,15 +6,13 @@ import Modal from "../common/modal";
 import Highlight from "../common/highlight";
 import Copy from "../common/copy";
 import Download from "../common/download";
+import formatter from "../../services/formatter";
 
 const SVGCopy = view(({ onClose }) => {
   const [isModalOpen, openModal] = useState(false);
   const ID = `${appStore.edges}-${appStore.growth}-${appStore.id}`;
-  const code = `
-  <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-    <path d="${appStore.path}"></path>
-  </svg>
-  `;
+  const svgEl = document.getElementById("blobSvg");
+  const code = svgEl ? formatter(svgEl.outerHTML) : "";
   return (
     <>
       <Button

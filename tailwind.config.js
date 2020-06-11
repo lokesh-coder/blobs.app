@@ -15,9 +15,6 @@ module.exports = {
         },
       },
     },
-    fontFamily: {
-      manrope: ["Manrope"],
-    },
   },
   purge: ["./src/**/*.html", "./src/**/*.jsx"],
   variants: {

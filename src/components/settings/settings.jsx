@@ -4,6 +4,8 @@ import EdgesSlider from "./edgesSlider";
 import GrowthSlider from "./growthSlider";
 import Links from "./links";
 import ColorPicker from "./colorPicker";
+import GradientPicker from "./gradientPicker";
+import Stroke from "./stroke";
 
 export default function Settings() {
   const edgeInfo =
@@ -19,9 +21,13 @@ export default function Settings() {
         <EdgesSlider />
       </SettingsItem>
 
-      <SettingsItem label="Color">
+      <div className="flex justify-center mt-3">
         <ColorPicker />
-      </SettingsItem>
+        <div className="w-6"></div>
+        <GradientPicker />
+        <div className="w-6"></div>
+        <Stroke />
+      </div>
       <Links />
     </div>
   );
