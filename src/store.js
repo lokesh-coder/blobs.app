@@ -7,6 +7,10 @@ const appStore = store({
   size: 500,
   path: "",
   id: "",
+  color: "#d1d8e0",
+  type: "color",
+  gradient: ["#d1d8e0", "#4a5568"],
+  stroke: false,
 });
 
 export { appStore };
