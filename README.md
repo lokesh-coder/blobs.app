@@ -7,20 +7,22 @@
 
 </h3>
 
-<h4  align="center">Create beautiful blob shapes with minimal code. </h4>
+<h4  align="center">Generate beautiful blob shapes for web and flutter apps. </h4>
 
 &nbsp;
 
 <div class="highlight highlight-source-shell">
 <pre>
-<div align="center"><strong >Blobs App</strong></div>
+<div align="center"><strong >Blobs Generator</strong></div>
 <div align="center"><a align="center" href="https://blobs.app/">https://blobs.app/</a></div>
 </pre>
 </div>
 
 ### Preview
 
-![frame2-iMac](https://user-images.githubusercontent.com/1754676/83411638-46b9ea80-a436-11ea-92b2-60ba4e845003.png)
+![preview](https://user-images.githubusercontent.com/1754676/84493278-20f9d480-acc5-11ea-8667-ee0df8f35442.png)
+
+![preview2](https://user-images.githubusercontent.com/1754676/84492711-3a4e5100-acc4-11ea-942c-37f9cd802fcf.png)
 
 ### Blobs for flutter
 
