@@ -1,4 +1,4 @@
-import { store } from "@risingstack/react-easy-state";
+import { store } from "@risingstack/react-easy-state"
 
 const appStore = store({
   edgesPrev: 0,
@@ -11,6 +11,6 @@ const appStore = store({
   type: "color",
   gradient: ["#d1d8e0", "#4a5568"],
   stroke: false,
-});
+})
 
-export { appStore };
+export { appStore }

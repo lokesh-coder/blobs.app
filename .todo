@@ -1,0 +1,28 @@
+
+✔ add pwa support @done
+✔ darkmode @done
+✔ animation @done
+✔ save settings @done
+✘ shortcuts @cancelled
+✘ loop @cancelled
+✘ clip image @cancelled
+✔ save blobs @done
+✔ view saved blobs @done
+✔ url id @done
+✘ reset settigs @cancelled
+✔ click logo to reoad to home @done
+☐ complexity change no animation
+☐ Sound from Zapsplat.com
+
+
+----
+
+Features:
+    ☐ Dark theme
+    ☐ Faster initial load
+    ☐ Image clipping
+    ☐ Patterns view
+    ☐ Save and manage blobs locally
+    ☐ tiny sound
+    ☐ offline support
+    ☐ static url for sharing
