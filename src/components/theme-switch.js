@@ -7,14 +7,11 @@ export default function ThemeSwitch() {
   return (
     <Button
       leftIcon={<ToggleIcon fontSize="18px" />}
-      variant="ghost"
+      variant="silent"
       aria-label="Toggle Theme"
       onClick={toggleMode}
-      fontWeight="normal"
-      fontSize="sm"
-      color="gray.400"
     >
-      switch theme
+      Switch theme
     </Button>
   )
 }

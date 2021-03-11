@@ -9,7 +9,7 @@ import FlutterCodeModalButton from "./Settings/FlutterCodeModalButton"
 
 const Actions = () => {
   return (
-    <Box>
+    <Box mt="10">
       <Container centerContent maxW="sm">
         <HStack spacing="24px">
           <HtmlCodeModalButton />

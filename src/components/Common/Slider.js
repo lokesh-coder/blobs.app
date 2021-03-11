@@ -29,11 +29,11 @@ const Slider = ({ name, value, min, max, onChange, info }) => {
           onChange={onChange}
           focusThumbOnChange={false}
         >
-          <SliderTrack bg="gray.200" _dark={{ bg: "gray.900" }}>
+          <SliderTrack bg="gray.200" _dark={{ bg: "gray.900", opacity: 0.5 }}>
             <Box position="relative" right={10} />
             <SliderFilledTrack bg="gray.400" _dark={{ bg: "gray.400" }} />
           </SliderTrack>
-          <Tooltip label={value} aria-label={value} hasArrow rounded="md">
+          <Tooltip label={value} aria-label={value} hasArrow variant="default">
             <SliderThumb
               boxSize={5}
               borderWidth="3px"

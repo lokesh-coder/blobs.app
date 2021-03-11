@@ -24,6 +24,7 @@ export default function Highlight({ code, lang }) {
         marginBottom: 0,
         marginTop: 0,
         backgroundColor: "transparent",
+        padding: 0,
       }}
       wrapLines
     >

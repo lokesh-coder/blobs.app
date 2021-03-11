@@ -83,8 +83,8 @@ export const formatCode = string => {
 
   const div = document.createElement("div")
   div.innerHTML = string.trim()
-
-  return format(div, 0).innerHTML
+  const formattedStr = format(div, 0).innerHTML
+  return formattedStr.replace(/^\s+|\s+$/g, "")
 }
 
 export const validateHex = input => {
@@ -107,8 +107,30 @@ export const getLocallySavedBlobs = () => {
 }
 
 export const saveBlobDataLocally = data => {
+  const {
+    edges,
+    growth,
+    svgPath,
+    seed,
+    color,
+    type,
+    colors,
+    isOutline,
+    image,
+    pattern,
+  } = store.getState()
   const newData = {
-    ...data,
+    edges,
+    growth,
+    svgPath,
+    seed,
+    color,
+    type,
+    colors,
+    isOutline,
+    image,
+    pattern,
+    id: Date.now(),
     name: generateName({ words: 2 }).spaced,
     url: `/${location.search}`,
   }

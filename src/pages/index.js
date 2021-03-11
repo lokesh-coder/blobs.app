@@ -9,6 +9,7 @@ import { store } from "../state"
 import SaveBlobButton from "../components/Settings/SaveBlobButton"
 import Logo from "../components/Logo"
 import BlobContainer from "../components/BlobContainer"
+import NavLinks from "../components/NavLinks"
 
 const IndexPage = () => {
   const storeData = store.getState()
@@ -52,18 +53,7 @@ const IndexPage = () => {
               </Heading>
             </Flex>
             <Settings />
-            <Link
-              as={GatsbyLink}
-              textDecor="underline"
-              color="purple.500"
-              fontSize="xl"
-              to="/page-2/"
-              _mediaDark={{ color: "green.300" }}
-              _dark={{ color: "green.300" }}
-            >
-              Go to page 22
-            </Link>
-            <SaveBlobButton />
+            <NavLinks />
           </Box>
         </Box>
       </Flex>

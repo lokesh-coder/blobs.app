@@ -4,6 +4,8 @@ import Pallette from "../Common/Pallette"
 import Popover from "../Common/Popover"
 import Input from "../Common/Input"
 import { Box, Button, Divider } from "@chakra-ui/react"
+import Ding from "../Common/Ding"
+import { PaintIcon } from "../icons"
 
 const defaultColors = [
   "#00cec9",
@@ -14,13 +16,24 @@ const defaultColors = [
   "#B53471",
 ]
 
-const SolidColorPicker = ({ color, switchToSolidColor }) => {
+const SolidColorPicker = ({ type, color, switchToSolidColor }) => {
+  const Picker = () => (
+    <Ding
+      label="Color"
+      Icon={PaintIcon}
+      isSelected={type == "solid"}
+      activeComp={<Box p="4px" rounded="2xl" bg={color} w="1px"></Box>}
+    />
+  )
+
   return (
-    <Popover props={{ bg: color }} label="Solid color">
+    <Popover props={{ bg: color }} label="Choose a color" trigger={<Picker />}>
       <Box>
         <Pallette onClick={switchToSolidColor} colors={defaultColors} />
         <Divider mb="4" />
-        <Input value={color} onEnter={switchToSolidColor} />
+        <Box p="3" pt="0">
+          <Input value={color} onEnter={switchToSolidColor} />
+        </Box>
       </Box>
     </Popover>
   )

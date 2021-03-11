@@ -18,7 +18,7 @@ const Pallette = ({ onClick, colors }) => {
             <Box
               as="button"
               p="15px"
-              rounded="2xl"
+              rounded="md"
               _focus={{ outline: 0 }}
               key={i}
               onClick={() => onClick(color)}

@@ -12,6 +12,7 @@ export const wrapPageElement = ({ element }) => {
       heading: "Inter",
     },
     colors: {
+      primary: "#d7819b",
       dark: {
         heaading: "#1d3557",
       },
@@ -53,7 +54,85 @@ export const wrapPageElement = ({ element }) => {
               color: colorMode === "dark" ? "gray.400" : "gray.500",
               fontWeight: 400,
               fontSize: "sm",
+              lineHeight: "initial",
               _hover: { bg: colorMode === "dark" ? "gray.800" : "gray.100" },
+            }
+          },
+          main: ({ colorMode }) => {
+            return {
+              bg: "gray.500",
+              fontWeight: "500",
+              color: "white",
+              w: "full",
+              p: "7",
+              fontSize: "md",
+              lineHeight: "initial",
+              transition: "all 0.4s ease",
+              _hover: { bg: colorMode === "dark" ? "#d7819b" : "gray.600" },
+              _focus: {
+                bg: colorMode === "dark" ? "#d7819b" : "gray.700",
+                shadow: "xl",
+                outline: "none",
+              },
+              _active: {
+                transform: "scale(0.95)",
+                bg: colorMode === "dark" ? "#d7819b" : "gray.500",
+              },
+            }
+          },
+
+          heavy: ({ colorMode }) => {
+            return {
+              bg: "transparent",
+              color: colorMode === "dark" ? "gray.400" : "gray.500",
+              fontWeight: 500,
+              fontSize: "sm",
+              borderWidth: "1px",
+              borderColor: "transparent",
+              rounded: "md",
+              textTransform: "uppercase",
+              lineHeight: "initial",
+              _hover: {
+                bg: colorMode === "dark" ? "gray.700" : "gray.600",
+                color: "#fff",
+                textDecoration: "none !important",
+                borderColor: colorMode === "dark" ? "gray.600" : "gray.600",
+                shadow: "xl",
+              },
+              _focus: { boxShadow: "none" },
+            }
+          },
+          silent: ({ colorMode }) => {
+            return {
+              fontWeight: "normal",
+              fontSize: "sm",
+              color: colorMode === "dark" ? "gray.400" : "gray.500",
+              outline: "none",
+              lineHeight: "initial",
+              _hover: {
+                color: colorMode === "dark" ? "gray.200" : "gray.700",
+                textDecoration: "none",
+              },
+              _focus: {
+                outline: "none",
+                boxShadow: "none",
+                color: colorMode === "dark" ? "gray.200" : "gray.700",
+              },
+            }
+          },
+        },
+      },
+      Tooltip: {
+        variants: {
+          default: () => {
+            return {
+              color: "gray.50",
+              bg: "gray.500",
+              fontWeight: "400",
+              fontSize: "sm",
+              rounded: "sm",
+              px: "3",
+              py: "1",
             }
           },
         },

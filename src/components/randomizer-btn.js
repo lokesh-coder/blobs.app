@@ -14,8 +14,9 @@ const RandomizerBtn = ({ soundVolume }) => {
         play()
         createRandomBlob()
       }}
+      variant="main"
     >
-      Change
+      Change blob
     </Button>
   )
 }

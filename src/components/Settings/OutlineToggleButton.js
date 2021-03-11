@@ -1,31 +1,19 @@
+import { CheckCircleIcon } from "@chakra-ui/icons"
 import { Box, Tooltip } from "@chakra-ui/react"
 import React from "react"
 import { dynamic } from "../../state"
+import Ding from "../Common/Ding"
+import { OutlineIcon } from "../icons"
 
 const OutlineToggleButton = ({ isOutline, toggleOutline }) => {
-  const label = "Toggle outline"
   return (
-    <Box>
-      <Tooltip label={label} aria-label={label} hasArrow rounded="md">
-        <Box
-          as="button"
-          p="3px"
-          rounded="2xl"
-          borderWidth="4px"
-          borderColor="#d1d8e0"
-          _focus={{ outline: 0 }}
-          _hover={{ boxShadow: "xl" }}
-          onClick={toggleOutline}
-        >
-          <Box
-            as="div"
-            p="8px"
-            rounded="2xl"
-            bg={isOutline ? "#4a5568" : "transparent"}
-          ></Box>
-        </Box>
-      </Tooltip>
-    </Box>
+    <Ding
+      label="Outline"
+      Icon={OutlineIcon}
+      isSelected={isOutline === true}
+      activeComp={<CheckCircleIcon fontSize="xs" color="green.500" />}
+      onClick={toggleOutline}
+    />
   )
 }
 

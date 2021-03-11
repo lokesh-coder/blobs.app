@@ -226,6 +226,42 @@ const LandscapeIcon = props => {
   )
 }
 
+const BookmarkIcon = props => {
+  return (
+    <Icon viewBox="0 0 24 24" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        d="M4 2h16a1 1 0 0 1 1 1v19.276a.5.5 0 0 1-.704.457L12 19.03l-8.296 3.702A.5.5 0 0 1 3 22.276V3a1 1 0 0 1 1-1zm8 11.5l2.939 1.545-.561-3.272 2.377-2.318-3.286-.478L12 6l-1.47 2.977-3.285.478 2.377 2.318-.56 3.272L12 13.5z"
+        fill="currentColor"
+      />
+    </Icon>
+  )
+}
+
+const SavedIcon = props => {
+  return (
+    <Icon viewBox="0 0 24 24" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        d="M20 22H6.5A3.5 3.5 0 0 1 3 18.5V5a3 3 0 0 1 3-3h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2v-3H6.5a1.5 1.5 0 0 0 0 3H19zM10 4v8l3.5-2 3.5 2V4h-7z"
+        fill="currentColor"
+      />
+    </Icon>
+  )
+}
+
+const TwitterIcon = props => {
+  return (
+    <Icon viewBox="0 0 24 24" {...props}>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+        fill="currentColor"
+      />
+    </Icon>
+  )
+}
+
 const OutlineIcon = props => {
   return (
     <Icon viewBox="0 0 24 24" {...props}>
@@ -299,4 +335,7 @@ export {
   OutlineIcon,
   ImageIcon,
   LandscapeIcon,
+  SavedIcon,
+  TwitterIcon,
+  BookmarkIcon,
 }

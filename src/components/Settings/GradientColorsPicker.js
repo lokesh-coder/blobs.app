@@ -4,6 +4,8 @@ import Pallette from "../Common/Pallette"
 import Popover from "../Common/Popover"
 import Input from "../Common/Input"
 import { Box, Divider, Flex } from "@chakra-ui/react"
+import Ding from "../Common/Ding"
+import { PaletteIcon } from "../icons"
 
 const defaultColors = [
   ["#e96443", "#904e95"],
@@ -19,20 +21,39 @@ const GradientColorsPicker = ({
   switchToGradientColors,
   updateGradientStartColor,
   updateGradientEndColor,
+  type,
 }) => {
+  const Picker = () => (
+    <Ding
+      label="Gradient"
+      Icon={PaletteIcon}
+      isSelected={type === "gradient"}
+      activeComp={
+        <Box
+          p="4px"
+          rounded="2xl"
+          w="full"
+          bgGradient={`linear(to-r, ${start}, ${end})`}
+        ></Box>
+      }
+    />
+  )
   return (
     <Popover
       props={{ bgGradient: `linear(to-b, ${start}, ${end})` }}
       label="Gradient colors"
+      trigger={<Picker />}
     >
       <Box>
         <Pallette onClick={switchToGradientColors} colors={defaultColors} />
         <Divider mb="4" />
-        <Flex>
-          <Input value={start} onEnter={updateGradientStartColor} />
-          <Divider mx="2" orientation="vertical" />
-          <Input value={end} onEnter={updateGradientEndColor} />
-        </Flex>
+        <Box p="3" pt="0">
+          <Flex>
+            <Input value={start} onEnter={updateGradientStartColor} />
+            <Divider mx="2" orientation="vertical" />
+            <Input value={end} onEnter={updateGradientEndColor} />
+          </Flex>
+        </Box>
       </Box>
     </Popover>
   )

@@ -18,22 +18,19 @@ import {
 } from "@chakra-ui/react"
 import React from "react"
 
-const Modal = ({ title, src, children, actions }) => {
+const Modal = ({ title, src, children, actions, size = "2xl" }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <>
-      <Tooltip label={title} aria-label={title} hasArrow rounded="md">
-        <Button onClick={onOpen} variant="ghost">
-          {src}
-        </Button>
-      </Tooltip>
+      <Box onClick={onOpen}>{src}</Box>
       <ChakModal
         isOpen={isOpen}
         onClose={onClose}
         isCentered
         motionPreset="scale"
-        size="2xl"
+        size={size}
         autoFocus={false}
+        returnFocusOnClose={false}
       >
         <ModalOverlay background="rgba(78,86,107,0.71)" />
         <ModalContent>
@@ -44,14 +41,19 @@ const Modal = ({ title, src, children, actions }) => {
               </Heading>
               <Flex>
                 <Box>{actions}</Box>
-                <Button onClick={onClose} variant="subtle">
+                <Button
+                  onClick={onClose}
+                  variant="subtle"
+                  pos="relative"
+                  right="-20px"
+                >
                   <CloseIcon />
                 </Button>
               </Flex>
             </Flex>
           </ModalHeader>
           <Divider />
-          <ModalBody pt="0" px="10" pb="10">
+          <ModalBody py="5" px="10">
             {typeof children === "function" ? children() : children}
           </ModalBody>
         </ModalContent>

@@ -3,18 +3,20 @@ import { Box, Center, Flex, Text } from "@chakra-ui/layout"
 import React from "react"
 import Footer from "../Footer"
 
-const Ding = ({ isSelected, activeComp, label, Icon }) => {
+const Ding = ({ isSelected, activeComp, label, Icon, ...props }) => {
   return (
     <Button
       variant="unstyled"
       p="2"
       h="auto"
       pos="relative"
-      opacity={isSelected ? 1 : 0.3}
+      opacity={isSelected ? 1 : 0.4}
       _hover={{ opacity: 1 }}
+      _focus={{ outline: "none" }}
+      {...props}
     >
       <Flex direction="column" align="center">
-        <Icon fontSize="2xl" color="gray.600" />
+        <Icon fontSize="2xl" color="gray.600" _dark={{ color: "gray.300" }} />
         <Text fontSize="sm" fontWeight="normal" variant="subtle" mt="2">
           {label}
         </Text>

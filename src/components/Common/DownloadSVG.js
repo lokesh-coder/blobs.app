@@ -13,9 +13,9 @@ const DownloadSVG = ({ content, filename }) => {
   }
   return (
     <Button
-      variant="subtle"
+      variant="heavy"
       onClick={() => downloadFile()}
-      leftIcon={<DownloadIcon />}
+      leftIcon={<DownloadIcon fontSize="lg" />}
     >
       Download
     </Button>

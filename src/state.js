@@ -76,7 +76,7 @@ const actions = _store => ({
   updateSize: (_, size) => ({ size }),
   blobLoaded: (_, status) => ({ blobCode: status }),
   toggleSound: state => ({
-    soundVolume: state.soundVolume === 0.75 ? 0 : 0.75,
+    soundVolume: state.soundVolume === 0.5 ? 0 : 0.5,
   }),
   resetStore: () => _store.reset(),
   setStaticBlobData: (_, data) => _store.setState(data),

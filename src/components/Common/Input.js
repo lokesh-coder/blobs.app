@@ -6,9 +6,12 @@ const Input = ({ value, onEnter }) => {
   return (
     <Box key={value}>
       <ChakInput
-        variant="filled"
+        variant="outline"
+        bg="white"
+        _dark={{ bg: "gray.600" }}
         placeholder="#000000"
         defaultValue={value}
+        _focus={{ borderColor: "primary", boxShadow: "0 0 0 1px #d7819b" }}
         onKeyDown={e => {
           if (e.code != "Enter") return
           if (!validateHex(e.target.value)) return

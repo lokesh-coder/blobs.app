@@ -1,6 +1,6 @@
 import { useClipboard } from "@chakra-ui/hooks"
 import { CopyIcon } from "@chakra-ui/icons"
-import { Button } from "@chakra-ui/react"
+import { Button, IconButton, Tooltip } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
 import { dynamic } from "../../state"
 import DownloadSVG from "../Common/DownloadSVG"
@@ -19,7 +19,11 @@ const HtmlCodeModalButton = ({ seed, edges, growth, svgPath }) => {
     return (
       <>
         <DownloadSVG content={code} filename={`blob_${ID}.svg`} />
-        <Button onClick={onCopy} leftIcon={<CopyIcon />} variant="subtle">
+        <Button
+          onClick={onCopy}
+          leftIcon={<CopyIcon fontSize="18px" />}
+          variant="heavy"
+        >
           {hasCopied ? "Copied" : "Copy code"}
         </Button>
       </>
@@ -29,14 +33,26 @@ const HtmlCodeModalButton = ({ seed, edges, growth, svgPath }) => {
   const Content = () => {
     const svgEl = document.getElementById("blobSvg")
     const markup = svgEl ? formatCode(svgEl.outerHTML) : ""
-    setCode(markup)
+
+    setCode(markup.replace(/^\s+|\s+$/g, ""))
     return <Highlight code={markup} lang={"markup"} />
   }
 
   return (
     <Modal
       title="Get the code"
-      src={<HtmlIcon w={6} h={6} color="gray.400" />}
+      src={
+        <Tooltip
+          label="View SVG code"
+          aria-label="View SVG code"
+          hasArrow
+          variant="default"
+        >
+          <IconButton variant="ghost">
+            <HtmlIcon w={6} h={6} color="gray.400" />
+          </IconButton>
+        </Tooltip>
+      }
       actions={<Actions />}
     >
       {() => <Content />}
