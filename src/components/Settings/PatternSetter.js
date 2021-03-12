@@ -68,6 +68,7 @@ const PatternSetter = ({ type, pattern, switchToPattern }) => {
       <Box p="3">
         {Object.keys(Patterns).map((name) => (
           <PatternBox
+            key={name}
             meta={Patterns[name]}
             clickHandler={switchToPattern}
             isSelected={pattern === name}

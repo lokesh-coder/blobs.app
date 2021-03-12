@@ -18,7 +18,11 @@ import ThemeSwitch from './theme-switch';
 
 const Footer = ({ toggleSound, playSound }) => (
   <Center my="6">
-    <HStack spacing="10px" fontSize="sm">
+    <HStack
+      spacing="10px"
+      fontSize="sm"
+      flexDirection={{ base: 'column-reverse', lg: 'row' }}
+    >
       <Button
         variant="silent"
         leftIcon={<CopyrightIcon fontSize="lg" />}

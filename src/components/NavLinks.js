@@ -53,6 +53,7 @@ const NavLinks = ({ saveBlob }) => {
             <Button
               href="/page-2/"
               as={GatbsyLink}
+              to="/page-2"
               variant="heavy"
               leftIcon={<SavedIcon fontSize="18px" />}
               aria-label="Saved blobs"
