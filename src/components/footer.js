@@ -1,16 +1,8 @@
-import { AtSignIcon } from "@chakra-ui/icons"
-import {
-  Box,
-  Container,
-  Link,
-  HStack,
-  Text,
-  Button,
-  Center,
-} from "@chakra-ui/react"
-import React from "react"
-import { dynamic } from "../state"
-import Modal from "./Common/Modal"
+/* eslint-disable react/jsx-wrap-multilines */
+import { Box, Link, Text, Button, Center, HStack } from '@chakra-ui/react';
+import React from 'react';
+import { dynamic } from '../state';
+import Modal from './Common/Modal';
 import {
   LoIcon,
   SoundIcon,
@@ -19,12 +11,12 @@ import {
   UserIcon,
   CopyrightIcon,
   CreditsIcon,
-} from "./icons"
-import Credits from "./Misc/Credits"
-import SourceCode from "./Misc/SourceCode"
-import ThemeSwitch from "./theme-switch"
+} from './icons';
+import Credits from './Misc/Credits';
+import SourceCode from './Misc/SourceCode';
+import ThemeSwitch from './theme-switch';
 
-const Footer = ({ toggleSound, soundVolume }) => (
+const Footer = ({ toggleSound, playSound }) => (
   <Center my="6">
     <HStack spacing="10px" fontSize="sm">
       <Button
@@ -36,7 +28,7 @@ const Footer = ({ toggleSound, soundVolume }) => (
       </Button>
 
       <Modal
-        title="Source code"
+        title="Source code & Libraries"
         size="md"
         src={
           <Button
@@ -84,8 +76,8 @@ const Footer = ({ toggleSound, soundVolume }) => (
       <Button
         variant="silent"
         leftIcon={(() => {
-          if (soundVolume == 0) return <SoundOffIcon fontSize="lg" />
-          return <SoundIcon fontSize="lg" />
+          if (!playSound) return <SoundOffIcon fontSize="lg" />;
+          return <SoundIcon fontSize="lg" />;
         })()}
         aria-label="Toggle Theme"
         onClick={toggleSound}
@@ -97,6 +89,6 @@ const Footer = ({ toggleSound, soundVolume }) => (
       </Box>
     </HStack>
   </Center>
-)
+);
 
-export default dynamic(Footer, ["soundVolume"])
+export default dynamic(Footer, ['playSound']);

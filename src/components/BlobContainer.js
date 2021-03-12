@@ -1,59 +1,42 @@
-import React, { useEffect, useState } from "react"
-import { dynamic } from "../state"
-import {
-  animateAndUpdatePath,
-  createFixedBlob,
-  createInitialBlob,
-  generateBlob,
-  loadNewBlobDataToStore,
-  loadRandomBlob,
-  parseURLParams,
-  setBlobTheme,
-  stringifyURLParams,
-} from "../utilities"
-import Blob from "./blob"
+import React, { useEffect, useState } from 'react';
+import { dynamic } from '../state';
+import { createFixedBlob, createInitialBlob, setBlobTheme } from '../utilities';
+import Blob from './blob';
 
-const BlobContainer = props => {
-  const {
-    edges,
-    growth,
-    color,
-    colors,
-    type,
-    isOutline,
-    svgPath,
-    image,
-    seed,
-    pattern,
-    setStaticBlobData,
-  } = props
+const BlobContainer = (props) => {
+  const { edges, growth, color, colors, type, isOutline, svgPath } = props;
 
   useEffect(() => {
-    createInitialBlob(props)
-  }, [])
+    createInitialBlob(props);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
-    if (svgPath) createFixedBlob(props)
-  }, [edges, growth])
+    if (svgPath) createFixedBlob(props);
+  }, [growth]);
 
   useEffect(() => {
-    if (svgPath) setBlobTheme(props)
-  }, [color, colors, isOutline, type])
+    if (svgPath) createFixedBlob(props, false);
+  }, [edges]);
 
-  return <Blob {...props} />
-}
+  useEffect(() => {
+    if (svgPath) setBlobTheme(props);
+  }, [color, colors, isOutline, type]);
+
+  return <Blob {...props} />;
+};
 
 export default dynamic(BlobContainer, [
-  "size",
-  "color",
-  "colors",
-  "color",
-  "type",
-  "isOutline",
-  "svgPath",
-  "edges",
-  "growth",
-  "seed",
-  "image",
-  "pattern",
-])
+  'size',
+  'color',
+  'colors',
+  'color',
+  'type',
+  'isOutline',
+  'svgPath',
+  'edges',
+  'growth',
+  'seed',
+  'image',
+  'pattern',
+]);

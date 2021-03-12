@@ -5,14 +5,19 @@
 ✔ save settings @done
 ✘ shortcuts @cancelled
 ✘ loop @cancelled
-✘ clip image @cancelled
+✔ clip image @done
 ✔ save blobs @done
 ✔ view saved blobs @done
 ✔ url id @done
 ✘ reset settigs @cancelled
 ✔ click logo to reoad to home @done
-☐ complexity change no animation
-☐ Sound from Zapsplat.com
+✔ complexity change no animation @done
+✔ Sound from Zapsplat.com @done
+✔ resize images @done
+✔ add favicon @done
+☐ update seo
+✔ default image @done
+✔ image clip fix @done
 
 
 ----

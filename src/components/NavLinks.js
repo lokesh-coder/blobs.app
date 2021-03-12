@@ -1,13 +1,19 @@
-import { Button } from "@chakra-ui/button"
-import { Box, Center, HStack, Text, Link } from "@chakra-ui/layout"
-import React from "react"
-import { Link as GatbsyLink } from "gatsby"
-import { SavedIcon, TwitterIcon, BookmarkIcon } from "./icons"
-import { saveBlobDataLocally } from "../utilities"
-import { useToast } from "@chakra-ui/toast"
+import {
+  Button,
+  Box,
+  Center,
+  HStack,
+  Text,
+  Link,
+  useToast,
+} from '@chakra-ui/react';
+import React from 'react';
+import { Link as GatbsyLink } from 'gatsby';
+import { SavedIcon, TwitterIcon, BookmarkIcon } from './icons';
+import { dynamic } from '../state';
 
-const NavLinks = () => {
-  const toast = useToast()
+const NavLinks = ({ saveBlob }) => {
+  const toast = useToast();
   return (
     <Box px="10" pt="3">
       <Center>
@@ -18,7 +24,7 @@ const NavLinks = () => {
               leftIcon={<BookmarkIcon fontSize="18px" />}
               aria-label="Save blob"
               onClick={() => {
-                saveBlobDataLocally()
+                saveBlob();
                 toast({
                   render: () => (
                     <Box
@@ -36,7 +42,7 @@ const NavLinks = () => {
                     </Box>
                   ),
                   duration: 2000,
-                })
+                });
               }}
             >
               Save
@@ -69,7 +75,7 @@ const NavLinks = () => {
         </HStack>
       </Center>
     </Box>
-  )
-}
+  );
+};
 
-export default NavLinks
+export default dynamic(NavLinks);

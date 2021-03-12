@@ -1,6 +1,6 @@
-import React from "react"
-import { graphql, Link as GatsbyLink, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Logo = ({ size = 100 }) => {
   const data = useStaticQuery(graphql`
@@ -13,17 +13,17 @@ const Logo = ({ size = 100 }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
-    <GatsbyLink to="/">
+    <Link to="/">
       <Img
         fixed={data.file.childImageSharp.fixed}
         alt="Blobs logo"
         style={{ height: size, width: size }}
       />
-    </GatsbyLink>
-  )
-}
+    </Link>
+  );
+};
 
-export default Logo
+export default Logo;

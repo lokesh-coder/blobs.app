@@ -1,25 +1,21 @@
-import { CloseIcon } from "@chakra-ui/icons"
+import { CloseIcon } from '@chakra-ui/icons';
 import {
   Box,
   Button,
   Flex,
-  Tooltip,
   Modal as ChakModal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalHeader,
   ModalOverlay,
   useDisclosure,
-  CloseButton,
-  Text,
   Heading,
   Divider,
-} from "@chakra-ui/react"
-import React from "react"
+} from '@chakra-ui/react';
+import React from 'react';
 
-const Modal = ({ title, src, children, actions, size = "2xl" }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+const Modal = ({ title, src, children, actions, size = '2xl' }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
       <Box onClick={onOpen}>{src}</Box>
@@ -54,12 +50,12 @@ const Modal = ({ title, src, children, actions, size = "2xl" }) => {
           </ModalHeader>
           <Divider />
           <ModalBody py="5" px="10">
-            {typeof children === "function" ? children() : children}
+            {typeof children === 'function' ? children() : children}
           </ModalBody>
         </ModalContent>
       </ChakModal>
     </>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

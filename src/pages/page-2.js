@@ -1,115 +1,43 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from 'react';
+import { Link } from 'gatsby';
 
-import SEO from "../components/seo"
-import Blob from "../components/blob"
-import { getLocallySavedBlobs, deleteLocallySavedBlob } from "../utilities"
-import {
-  Box,
-  Button,
-  Center,
-  Divider,
-  Heading,
-  LinkBox,
-  LinkOverlay,
-  SimpleGrid,
-  Text,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react"
-import { TrashIcon } from "../components/icons"
-import Logo from "../components/Logo"
-import { ArrowBackIcon } from "@chakra-ui/icons"
+import { Box, Center, Heading, Text } from '@chakra-ui/react';
+import { ArrowBackIcon } from '@chakra-ui/icons';
+import SEO from '../components/seo';
 
-const SecondPage = () => {
-  const cardHoverBg = useColorModeValue("gray.100", "gray.700")
-  const blobs = getLocallySavedBlobs() || []
-  const getBlobData = data => {
-    return { ...data, size: 500 }
-  }
+import Logo from '../components/Logo';
+import SavedBlobs from '../components/SavedBlobs';
 
-  return (
-    <>
-      <SEO title="Page two" />
-      <Box my="10" textAlign="center">
-        <Logo />
-        <Heading
-          size="xl"
-          display="flex"
-          alignItems="center"
-          justifyContent="center"
-          variant="main"
-        >
-          Browse saved blobs
-        </Heading>
-        <Text my="2" variant="subtle">
-          Click on the any blob card to navigate to edit screen
-        </Text>
-      </Box>
-      {blobs.length === 0 && (
-        <Box textAlign="center">
-          <Text my="20" fontSize="2xl">
-            No saved blobs found!
-          </Text>
-        </Box>
-      )}
-      <SimpleGrid
-        columns={{ sm: 2, md: 4 }}
-        spacing="40px"
-        mb="20"
+const SecondPage = () => (
+  <>
+    <SEO
+      title="Save blobs locally and access them anytime even when in offline"
+      description="Customizable blobs as SVG and Flutter Widget. Create random or fixed blobs, loop, animate, clip them with ease"
+    />
+    <Box my="10" textAlign="center">
+      <Logo />
+      <Heading
+        size="xl"
+        display="flex"
+        alignItems="center"
         justifyContent="center"
+        variant="main"
       >
-        {blobs.map(blob => {
-          const ID = `${blob.edges}-${blob.growth}-${blob.seed}`
-          return (
-            <LinkBox
-              h="200"
-              rounded="2xl"
-              p="5"
-              borderWidth="1px"
-              _hover={{ boxShadow: "2xl", background: cardHoverBg }}
-              role="group"
-            >
-              <Text
-                fontSize="sm"
-                display="flex"
-                alignItems="center"
-                justifyContent="space-between"
-              >
-                <LinkOverlay
-                  style={{ textTransform: "uppercase" }}
-                  href={blob.url}
-                >
-                  {blob.name}
-                </LinkOverlay>
-                <Button
-                  variant="unstyled"
-                  visibility="hidden"
-                  h="auto"
-                  _groupHover={{ visibility: "visible" }}
-                  onClick={() => {
-                    deleteLocallySavedBlob(blob.id)
-                    window.location.reload()
-                  }}
-                >
-                  <TrashIcon color="tomato" />
-                </Button>
-              </Text>
-              <Divider mt="4" />
+        Browse saved blobs
+      </Heading>
+      <Text my="2" variant="subtle">
+        Click on the any blob card to navigate to edit screen
+      </Text>
+    </Box>
+    <SavedBlobs />
+    <Center>
+      <Link to="/">
+        {' '}
+        <ArrowBackIcon />
+        Go back to the homepage
+      </Link>
+    </Center>
+  </>
+);
 
-              <Blob {...getBlobData(blob)} />
-            </LinkBox>
-          )
-        })}
-      </SimpleGrid>
-      <Center>
-        <Link to="/">
-          {" "}
-          <ArrowBackIcon /> Go back to the homepage
-        </Link>
-      </Center>
-    </>
-  )
-}
-
-export default SecondPage
+export default SecondPage;

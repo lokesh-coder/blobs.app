@@ -1,42 +1,39 @@
-import { useClipboard } from "@chakra-ui/hooks"
-import { CopyIcon } from "@chakra-ui/icons"
-import { Button, IconButton, Tooltip } from "@chakra-ui/react"
-import React, { useEffect, useState } from "react"
-import { dynamic } from "../../state"
-import DownloadSVG from "../Common/DownloadSVG"
-import Highlight from "../Common/Highlight"
-import Modal from "../Common/Modal"
-import { HtmlIcon } from "../icons"
-import { formatCode } from "../../utilities"
+/* eslint-disable react/jsx-wrap-multilines */
+import { Button, IconButton, Tooltip, useClipboard } from '@chakra-ui/react';
+import React, { useState } from 'react';
+import { dynamic } from '../../state';
+import DownloadSVG from '../Common/DownloadSVG';
+import Highlight from '../Common/Highlight';
+import Modal from '../Common/Modal';
+import { HtmlIcon, CopyIcon } from '../icons';
+import { formatCode } from '../../utilities';
 
 const HtmlCodeModalButton = ({ seed, edges, growth, svgPath }) => {
-  const ID = `${edges}-${growth}-${seed}`
-  const [code, setCode] = useState(null)
+  const ID = `${edges}-${growth}-${seed}`;
+  const [code, setCode] = useState(null);
 
-  const { hasCopied, onCopy } = useClipboard(code)
+  const { hasCopied, onCopy } = useClipboard(code);
 
-  const Actions = () => {
-    return (
-      <>
-        <DownloadSVG content={code} filename={`blob_${ID}.svg`} />
-        <Button
-          onClick={onCopy}
-          leftIcon={<CopyIcon fontSize="18px" />}
-          variant="heavy"
-        >
-          {hasCopied ? "Copied" : "Copy code"}
-        </Button>
-      </>
-    )
-  }
+  const Actions = () => (
+    <>
+      <DownloadSVG content={code} filename={`blob_${ID}.svg`} />
+      <Button
+        onClick={onCopy}
+        leftIcon={<CopyIcon fontSize="18px" />}
+        variant="heavy"
+      >
+        {hasCopied ? 'Copied' : 'Copy code'}
+      </Button>
+    </>
+  );
 
   const Content = () => {
-    const svgEl = document.getElementById("blobSvg")
-    const markup = svgEl ? formatCode(svgEl.outerHTML) : ""
+    const svgEl = document.getElementById('blobSvg');
+    const markup = svgEl ? formatCode(svgEl.outerHTML) : '';
 
-    setCode(markup.replace(/^\s+|\s+$/g, ""))
-    return <Highlight code={markup} lang={"markup"} />
-  }
+    setCode(markup.replace(/^\s+|\s+$/g, ''));
+    return <Highlight code={markup} lang="markup" />;
+  };
 
   return (
     <Modal
@@ -57,11 +54,11 @@ const HtmlCodeModalButton = ({ seed, edges, growth, svgPath }) => {
     >
       {() => <Content />}
     </Modal>
-  )
-}
+  );
+};
 export default dynamic(HtmlCodeModalButton, [
-  "seed",
-  "edges",
-  "growth",
-  "svgPath",
-])
+  'seed',
+  'edges',
+  'growth',
+  'svgPath',
+]);

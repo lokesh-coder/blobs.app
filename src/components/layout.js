@@ -5,21 +5,15 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import {
-  Box,
-  Container,
-  Heading,
-  Link,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
+import { Box, Container, useColorModeValue } from '@chakra-ui/react';
 
-import Footer from "./Footer"
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
-  const theme = useColorModeValue("light", "dark")
+  const theme = useColorModeValue('light', 'dark');
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +22,7 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Box className={theme}>
@@ -42,14 +36,14 @@ const Layout = ({ children }) => {
         <Box as="main" flex="1" display="flex" flexDir="column">
           {children}
         </Box>
-        <Footer siteTitle={data.site.siteMetadata?.title || `Title`} />
+        <Footer siteTitle={data.site.siteMetadata?.title || 'Title'} />
       </Container>
     </Box>
-  )
-}
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

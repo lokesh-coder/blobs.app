@@ -1,23 +1,25 @@
-import React, { useEffect } from "react"
-import { Button } from "@chakra-ui/react"
-import useSound from "use-sound"
-import boopSfx from "/assets/spring.mp3"
+/* eslint-disable import/no-absolute-path */
+/* eslint-disable import/no-unresolved */
+import React from 'react';
+import { Button } from '@chakra-ui/react';
+import useSound from 'use-sound';
+import boopSfx from '/assets/spring.mp3';
 
-import { createRandomBlob } from "../utilities"
-import { dynamic } from "../state"
+import { createRandomBlob } from '../utilities';
+import { dynamic } from '../state';
 
-const RandomizerBtn = ({ soundVolume }) => {
-  const [play] = useSound(boopSfx, { volume: soundVolume })
+const RandomizerBtn = ({ playSound }) => {
+  const [play] = useSound(boopSfx, { volume: 0.5 });
   return (
     <Button
       onClick={() => {
-        play()
-        createRandomBlob()
+        if (playSound) play();
+        createRandomBlob();
       }}
       variant="main"
     >
       Change blob
     </Button>
-  )
-}
-export default dynamic(RandomizerBtn, ["soundVolume"])
+  );
+};
+export default dynamic(RandomizerBtn, ['playSound']);

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "blobs.app",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "Blobs - Generate beautiful blob shapes for web and flutter apps",
+  "version": "2.0.0",
+  "author": "Lokesh Rajendran <lokesh.aero@gmail.com>",
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^1.0.1",
     "@chakra-ui/icons": "^1.0.5",
@@ -48,11 +48,22 @@
     "use-sound": "^2.0.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "2.2.1"
   },
   "keywords": [
-    "gatsby"
+    "blobs",
+    "generate",
+    "render",
+    "shapes",
+    "create"
   ],
   "license": "MIT",
   "scripts": {
@@ -62,6 +73,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx src/",
+    "lint:fix": "./node_modules/.bin/eslint --ext .js,.jsx src/ --fix",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {

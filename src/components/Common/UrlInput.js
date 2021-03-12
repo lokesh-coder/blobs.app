@@ -1,10 +1,9 @@
-import { Box, Center, Input as ChakInput, Text } from "@chakra-ui/react"
-import React, { useState } from "react"
-import { validateHex } from "../../utilities"
+import { Box, Center, Input as ChakInput, Text } from '@chakra-ui/react';
+import React, { useState } from 'react';
 
 const UrlInput = ({ value, onEnter }) => {
-  const [error, setError] = useState(null)
-  const urlRegex = /([\w+]+\:\/\/)?([\w\d-]+\.)*[\w-]+[\.\:]\w+([\/\?\=\&\#\.]?[\w-]+)*\/?/gm
+  const [error, setError] = useState(null);
+  const urlRegex = /([\w+]+\:\/\/)?([\w\d-]+\.)*[\w-]+[\.\:]\w+([\/\?\=\&\#\.]?[\w-]+)*\/?/gm;
 
   return (
     <Box key={value}>
@@ -12,18 +11,18 @@ const UrlInput = ({ value, onEnter }) => {
         variant="outline"
         placeholder="https://someurl.png"
         bg="white"
-        _dark={{ bg: "gray.600" }}
+        _dark={{ bg: 'gray.600' }}
         defaultValue={value}
-        _focus={{ borderColor: "primary", boxShadow: "0 0 0 1px #d7819b" }}
-        onKeyDown={e => {
-          if (e.code != "Enter") return
-          const url = e.target.value
+        _focus={{ borderColor: 'primary', boxShadow: '0 0 0 1px #d7819b' }}
+        onKeyDown={(e) => {
+          if (e.code !== 'Enter') return;
+          const url = e.target.value;
           if (!urlRegex.test(url)) {
-            setError("Invalid URL")
-            return
+            setError('Invalid URL');
+            return;
           }
-          setError(null)
-          onEnter(url)
+          setError(null);
+          onEnter(url);
         }}
       />
       {error && (
@@ -34,7 +33,7 @@ const UrlInput = ({ value, onEnter }) => {
         </Center>
       )}
     </Box>
-  )
-}
+  );
+};
 
-export default UrlInput
+export default UrlInput;

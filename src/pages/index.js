@@ -1,64 +1,52 @@
-import * as React from "react"
-import { Link as GatsbyLink } from "gatsby"
-import { Box, Heading, Link, Flex } from "@chakra-ui/react"
+import * as React from 'react';
+import { Box, Heading, Flex } from '@chakra-ui/react';
 
-import SEO from "../components/seo"
-import Settings from "../components/settings"
-import Actions from "../components/actions"
-import { store } from "../state"
-import SaveBlobButton from "../components/Settings/SaveBlobButton"
-import Logo from "../components/Logo"
-import BlobContainer from "../components/BlobContainer"
-import NavLinks from "../components/NavLinks"
+import SEO from '../components/seo';
+import Settings from '../components/settings';
+import Actions from '../components/actions';
+import Logo from '../components/Logo';
+import BlobContainer from '../components/BlobContainer';
+import NavLinks from '../components/NavLinks';
 
-const IndexPage = () => {
-  const storeData = store.getState()
-  React.useEffect(() => {
-    // loadBlobFromURLData(setStore, storeData)
-  }, [])
-
-  React.useEffect(() => {
-    // if (storeData.svgPath) loadRandomBlob(storeData, setStore)
-    // loadBlobFromURLData(setStore, storeData)
-  }, [...Object.keys(storeData)])
-  return (
-    <>
-      <SEO title="Home" />
-      <Flex wrap="wrap" flex="1">
-        <Box
-          w={{ sm: "100%", lg: 8 / 12 }}
-          justifyContent="center"
-          alignItems="center"
-          display="flex"
-          flexDirection="column"
-        >
-          <Box w={{ sm: "100%", lg: 500 }} h={{ lg: 500 }}>
-            {/* <Blob {...props} /> */}
-            <BlobContainer />
-          </Box>
-          <Actions />
+const IndexPage = () => (
+  <>
+    <SEO
+      title="Blobs - Generate beautiful blob shapes for web and flutter apps"
+      description="Customizable blobs as SVG and Flutter Widget. Create random or fixed blobs, loop, animate, clip them with ease"
+    />
+    <Flex wrap="wrap" flex="1">
+      <Box
+        w={{ sm: '100%', lg: 8 / 12 }}
+        justifyContent="center"
+        alignItems="center"
+        display="flex"
+        flexDirection="column"
+      >
+        <Box w={{ sm: '100%', lg: 500 }} h={{ lg: 500 }}>
+          <BlobContainer />
         </Box>
+        <Actions />
+      </Box>
 
-        <Box
-          flex="1"
-          display="flex"
-          alignItems="center"
-          w={{ sm: "100%", lg: 4 / 12 }}
-        >
-          <Box w="full">
-            <Flex align="center" justify="center" direction="column" mb="8">
-              <Logo />
-              <Heading fontSize="3xl" variant="main">
-                Generate blobs
-              </Heading>
-            </Flex>
-            <Settings />
-            <NavLinks />
-          </Box>
+      <Box
+        flex="1"
+        display="flex"
+        alignItems="center"
+        w={{ sm: '100%', lg: 4 / 12 }}
+      >
+        <Box w="full">
+          <Flex align="center" justify="center" direction="column" mb="8">
+            <Logo />
+            <Heading fontSize="3xl" variant="main">
+              Generate blobs
+            </Heading>
+          </Flex>
+          <Settings />
+          <NavLinks />
         </Box>
-      </Flex>
-    </>
-  )
-}
+      </Box>
+    </Flex>
+  </>
+);
 
-export default IndexPage
+export default IndexPage;

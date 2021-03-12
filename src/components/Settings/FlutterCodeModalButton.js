@@ -1,14 +1,19 @@
-import { useClipboard } from "@chakra-ui/hooks"
-import { Box, Button, IconButton, Link, Text, Tooltip } from "@chakra-ui/react"
-import React from "react"
-import { CopyIcon } from "@chakra-ui/icons"
-import { dynamic } from "../../state"
-import Highlight from "../Common/Highlight"
-import Modal from "../Common/Modal"
-import { FlutterIcon } from "../icons"
+import {
+  Button,
+  IconButton,
+  Link,
+  Text,
+  Tooltip,
+  useClipboard,
+} from '@chakra-ui/react';
+import React from 'react';
+import { dynamic } from '../../state';
+import Highlight from '../Common/Highlight';
+import Modal from '../Common/Modal';
+import { FlutterIcon, CopyIcon } from '../icons';
 
 const FlutterCodeModalButton = ({ edges, growth, seed }) => {
-  const ID = `${edges}-${growth}-${seed}`
+  const ID = `${edges}-${growth}-${seed}`;
   const code = `///import blobs library
 import 'package:blobs/blobs.dart';
   
@@ -19,22 +24,20 @@ Container(
     size: 400,
   ),
 ),
-  `
-  const { hasCopied, onCopy } = useClipboard(ID)
+  `;
+  const { hasCopied, onCopy } = useClipboard(ID);
 
-  const Actions = () => {
-    return (
-      <>
-        <Button
-          onClick={onCopy}
-          variant="heavy"
-          leftIcon={<CopyIcon fontSize="lg" />}
-        >
-          {hasCopied ? "Copied" : "Copy ID"}
-        </Button>
-      </>
-    )
-  }
+  const Actions = () => (
+    <>
+      <Button
+        onClick={onCopy}
+        variant="heavy"
+        leftIcon={<CopyIcon fontSize="lg" />}
+      >
+        {hasCopied ? 'Copied' : 'Copy ID'}
+      </Button>
+    </>
+  );
 
   return (
     <Modal
@@ -55,14 +58,14 @@ Container(
     >
       <Highlight code={code} lang="dart" />
       <Text fontSize="sm">
-        For more info about the package and documentation, please check the{" "}
+        For more info about the package and documentation, please check the{' '}
         <Link href="https://pub.dev/packages/blobs/" isExternal color="primary">
           blobs
-        </Link>{" "}
+        </Link>{' '}
         repository.
       </Text>
     </Modal>
-  )
-}
+  );
+};
 
-export default dynamic(FlutterCodeModalButton, ["edges", "growth", "seed"])
+export default dynamic(FlutterCodeModalButton, ['edges', 'growth', 'seed']);

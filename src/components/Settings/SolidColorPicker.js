@@ -1,30 +1,30 @@
-import React from "react"
-import { dynamic } from "../../state"
-import Pallette from "../Common/Pallette"
-import Popover from "../Common/Popover"
-import Input from "../Common/Input"
-import { Box, Button, Divider } from "@chakra-ui/react"
-import Ding from "../Common/Ding"
-import { PaintIcon } from "../icons"
+import React from 'react';
+import { Box, Divider } from '@chakra-ui/react';
+import { dynamic } from '../../state';
+import Pallette from '../Common/Pallette';
+import Popover from '../Common/Popover';
+import Input from '../Common/Input';
+import Ding from '../Common/Ding';
+import { PaintIcon } from '../icons';
 
 const defaultColors = [
-  "#00cec9",
-  "#fab1a0",
-  "#fdcb6e",
-  "#fd79a8",
-  "#a29bfe",
-  "#B53471",
-]
+  '#00cec9',
+  '#fab1a0',
+  '#fdcb6e',
+  '#fd79a8',
+  '#a29bfe',
+  '#B53471',
+];
 
 const SolidColorPicker = ({ type, color, switchToSolidColor }) => {
   const Picker = () => (
     <Ding
       label="Color"
       Icon={PaintIcon}
-      isSelected={type == "solid"}
-      activeComp={<Box p="4px" rounded="2xl" bg={color} w="1px"></Box>}
+      isSelected={type == 'solid'}
+      activeComp={<Box p="4px" rounded="2xl" bg={color} w="1px" />}
     />
-  )
+  );
 
   return (
     <Popover props={{ bg: color }} label="Choose a color" trigger={<Picker />}>
@@ -36,7 +36,7 @@ const SolidColorPicker = ({ type, color, switchToSolidColor }) => {
         </Box>
       </Box>
     </Popover>
-  )
-}
+  );
+};
 
-export default dynamic(SolidColorPicker, ["color", "type"])
+export default dynamic(SolidColorPicker, ['color', 'type']);

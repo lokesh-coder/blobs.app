@@ -1,20 +1,20 @@
-import React from "react"
-import { dynamic } from "../../state"
-import Pallette from "../Common/Pallette"
-import Popover from "../Common/Popover"
-import Input from "../Common/Input"
-import { Box, Divider, Flex } from "@chakra-ui/react"
-import Ding from "../Common/Ding"
-import { PaletteIcon } from "../icons"
+import React from 'react';
+import { Box, Divider, Flex } from '@chakra-ui/react';
+import { dynamic } from '../../state';
+import Pallette from '../Common/Pallette';
+import Popover from '../Common/Popover';
+import Input from '../Common/Input';
+import Ding from '../Common/Ding';
+import { PaletteIcon } from '../icons';
 
 const defaultColors = [
-  ["#e96443", "#904e95"],
-  ["#ff5f6d", "#ffc371"],
-  ["#eecda3", "#ef629f"],
-  ["#4ca1af", "#c4e0e5"],
-  ["#c2e59c", "#64b3f4"],
-  ["#3ca55c", "#b5ac49"],
-]
+  ['#e96443', '#904e95'],
+  ['#ff5f6d', '#ffc371'],
+  ['#eecda3', '#ef629f'],
+  ['#4ca1af', '#c4e0e5'],
+  ['#c2e59c', '#64b3f4'],
+  ['#3ca55c', '#b5ac49'],
+];
 
 const GradientColorsPicker = ({
   colors: [start, end],
@@ -27,17 +27,17 @@ const GradientColorsPicker = ({
     <Ding
       label="Gradient"
       Icon={PaletteIcon}
-      isSelected={type === "gradient"}
+      isSelected={type === 'gradient'}
       activeComp={
         <Box
           p="4px"
           rounded="2xl"
           w="full"
           bgGradient={`linear(to-r, ${start}, ${end})`}
-        ></Box>
+        />
       }
     />
-  )
+  );
   return (
     <Popover
       props={{ bgGradient: `linear(to-b, ${start}, ${end})` }}
@@ -56,7 +56,7 @@ const GradientColorsPicker = ({
         </Box>
       </Box>
     </Popover>
-  )
-}
+  );
+};
 
-export default dynamic(GradientColorsPicker, ["colors", "type"])
+export default dynamic(GradientColorsPicker, ['colors', 'type']);
