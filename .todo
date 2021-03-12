@@ -15,7 +15,7 @@
 ✔ Sound from Zapsplat.com @done
 ✔ resize images @done
 ✔ add favicon @done
-☐ update seo
+✔ update seo @done
 ✔ default image @done
 ✔ image clip fix @done
 
@@ -23,11 +23,11 @@
 ----
 
 Features:
-    ☐ Dark theme
-    ☐ Faster initial load
-    ☐ Image clipping
-    ☐ Patterns view
-    ☐ Save and manage blobs locally
-    ☐ tiny sound
-    ☐ offline support
-    ☐ static url for sharing
+    ✔ Dark theme @done
+    ✔ Faster initial load @done
+    ✔ Image clipping @done
+    ✔ Patterns view @done
+    ✔ Save and manage blobs locally @done
+    ✔ tiny sound @done
+    ✔ offline support @done
+    ✔ static url for sharing @done

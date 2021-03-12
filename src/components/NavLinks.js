@@ -38,7 +38,7 @@ const NavLinks = ({ saveBlob }) => {
                       fontWeight="500"
                       shadow="xl"
                     >
-                      Toast Saved!
+                      Blob Saved!
                     </Box>
                   ),
                   duration: 2000,
