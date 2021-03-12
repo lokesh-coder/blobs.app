@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Box, Container, useColorModeValue } from '@chakra-ui/react';
 
-import Footer from './Footer';
+import Footer from '../components/Common/Footer';
 
 const Layout = ({ children }) => {
   const theme = useColorModeValue('light', 'dark');

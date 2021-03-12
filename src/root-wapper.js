@@ -2,7 +2,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import React from 'react';
 import { Provider } from 'redux-zero/react';
 import { mode } from '@chakra-ui/theme-tools';
-import Layout from './components/Layout';
+import Layout from './components/layout';
 import { store } from './state';
 
 // eslint-disable-next-line import/prefer-default-export
