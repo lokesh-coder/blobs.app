@@ -3,6 +3,8 @@ module.exports = {
     siteUrl: 'https://blobs.app',
     name: 'blobs.app',
     description: 'Generate beautiful blob shapesfor web and flutter apps',
+    descriptionLong:
+      'Customizable blobs as SVG and Flutter Widget. Create random or fixed blobs, loop, animate, clip them with ease',
     short_name: 'Blob generator',
     start_url: '/',
     background_color: '#d7819b',
@@ -33,6 +35,13 @@ module.exports = {
         theme_color: '#663399',
         display: 'standalone',
         icon: 'src/images/blobs.png',
+      },
+    },
+
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-167428362-1',
       },
     },
     'gatsby-plugin-offline',

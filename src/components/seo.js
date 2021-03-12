@@ -26,6 +26,7 @@ function SEO({ description, lang, meta, title }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaDescriptionLong = site.siteMetadata.descriptionLong;
   const defaultTitle = site.siteMetadata?.title;
 
   return (
@@ -46,15 +47,27 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: 'og:description',
-          content: metaDescription,
+          content: metaDescriptionLong,
         },
         {
           property: 'og:type',
           content: 'website',
         },
         {
+          property: 'og:url',
+          content: 'https://blobs.app/',
+        },
+        {
+          property: 'og:image',
+          content: '/blobs_app_poster.png',
+        },
+        {
           name: 'twitter:card',
-          content: 'summary',
+          content: 'summary_large_image',
+        },
+        {
+          name: 'twitter:url',
+          content: 'https://blobs.app/',
         },
         {
           name: 'twitter:creator',
@@ -66,7 +79,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:description',
-          content: metaDescription,
+          content: metaDescriptionLong,
+        },
+        {
+          name: 'twitter:image',
+          content: '/blobs_app_poster.png',
         },
       ].concat(meta)}
     />
