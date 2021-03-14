@@ -16,7 +16,6 @@ import { TrashIcon } from './icons';
 
 const SavedBlobs = ({ savedBlobs = [], deleteBlob, loadBlobs }) => {
   const cardHoverBg = useColorModeValue('gray.100', 'gray.700');
-  console.log('savedBlobs', savedBlobs);
   useEffect(() => {
     if (!savedBlobs) loadBlobs();
   }, [savedBlobs]);
