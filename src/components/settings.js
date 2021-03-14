@@ -10,7 +10,7 @@ import ImageSetter from './Settings/ImageSetter';
 import PatternSetter from './Settings/PatternSetter';
 
 const Settings = () => (
-  <Box px="10" py="5">
+  <Box px={{ lg: 10 }} py="5">
     <RandomnessSlider />
     <ComplexitySlider />
     <Divider my="5" />

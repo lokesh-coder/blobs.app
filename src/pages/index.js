@@ -46,7 +46,7 @@ const IndexPage = () => (
         flex="1"
         display="flex"
         alignItems="center"
-        w={{ sm: '100%', lg: 4 / 12 }}
+        w={{ base: '100%', lg: 4 / 12 }}
       >
         <Box w="full">
           <Flex
