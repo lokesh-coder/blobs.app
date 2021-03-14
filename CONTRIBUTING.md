@@ -15,7 +15,7 @@ Run unit tests
 
 ```
     # run test cases
-    npm run test 
+    npm run test
 
     # watch mode
 
@@ -23,15 +23,19 @@ Run unit tests
 ```
 
 ### Linting
+
 ```
     npm run lint
 ```
+
 It's also a good idea to add an eslint plugin in your editor.
 
 To fix lint errors from the command line:
+
 ```
 npm run lint
 ```
 
 ## Submitting Pull Requests
+
 This project follows [GitHub's standard forking model.](https://guides.github.com/activities/forking/). Please fork the project to submit pull requests.
