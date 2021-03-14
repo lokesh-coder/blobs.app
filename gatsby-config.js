@@ -44,7 +44,14 @@ module.exports = {
         trackingId: 'UA-167428362-1',
       },
     },
-    'gatsby-plugin-offline',
+    {
+      resolve: '@chakra-ui/gatsby-plugin',
+      options: {
+        isResettingCSS: true,
+        isUsingColorMode: true,
+        portalZIndex: 40,
+      },
+    },
     '@chakra-ui/gatsby-plugin',
   ],
 };

@@ -7,9 +7,10 @@ import Actions from '../components/actions';
 import Logo from '../components/Logo';
 import BlobContainer from '../components/BlobContainer';
 import NavLinks from '../components/NavLinks';
+import Layout from '../components/layout';
 
 const IndexPage = () => (
-  <>
+  <Layout>
     <SEO
       title="Blobs - Generate beautiful blob shapes for web and flutter apps"
       description="Customizable blobs as SVG and Flutter Widget. Create random or fixed blobs, loop, animate, clip them with ease"
@@ -65,7 +66,7 @@ const IndexPage = () => (
         </Box>
       </Box>
     </Flex>
-  </>
+  </Layout>
 );
 
 export default IndexPage;

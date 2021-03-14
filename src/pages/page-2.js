@@ -7,9 +7,10 @@ import SEO from '../components/seo';
 
 import Logo from '../components/Logo';
 import SavedBlobs from '../components/SavedBlobs';
+import Layout from '../components/layout';
 
 const SecondPage = () => (
-  <>
+  <Layout>
     <SEO
       title="Save blobs locally and access them anytime even when in offline"
       description="Customizable blobs as SVG and Flutter Widget. Create random or fixed blobs, loop, animate, clip them with ease"
@@ -37,7 +38,7 @@ const SecondPage = () => (
         Go back to the homepage
       </Link>
     </Center>
-  </>
+  </Layout>
 );
 
 export default SecondPage;

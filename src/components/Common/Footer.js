@@ -1,8 +1,8 @@
 /* eslint-disable react/jsx-wrap-multilines */
 import { Box, Link, Text, Button, Center, HStack } from '@chakra-ui/react';
 import React from 'react';
-import { dynamic } from '../state';
-import Modal from './Common/Modal';
+import { dynamic } from '../../state';
+import Modal from './Modal';
 import {
   LoIcon,
   SoundIcon,
@@ -11,10 +11,10 @@ import {
   UserIcon,
   CopyrightIcon,
   CreditsIcon,
-} from './icons';
-import Credits from './Misc/Credits';
-import SourceCode from './Misc/SourceCode';
-import ThemeSwitch from './theme-switch';
+} from '../icons';
+import Credits from '../Misc/Credits';
+import SourceCode from '../Misc/SourceCode';
+import ThemeSwitch from '../theme-switch';
 
 const Footer = ({ toggleSound, playSound }) => (
   <Center my="6">

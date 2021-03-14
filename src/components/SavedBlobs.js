@@ -37,7 +37,7 @@ const SavedBlobs = ({ savedBlobs = [], deleteBlob, loadBlobs }) => {
       >
         {savedBlobs?.map((blob) => (
           <LinkBox
-            h="200"
+            // h="200"
             rounded="2xl"
             p="5"
             borderWidth="1px"
