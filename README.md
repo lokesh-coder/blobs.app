@@ -19,7 +19,7 @@
 </div>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/1754676/111070755-222c8c00-84f9-11eb-9ac8-27a6bba547a1.png"  alt="Social preview"></p>
+<img src="https://user-images.githubusercontent.com/1754676/111070973-0f668700-84fa-11eb-9457-4d6282e90eec.png"  alt="Social preview"></p>
 
 
 
