@@ -1,0 +1,2 @@
+(self.webpackChunkblobs_app=self.webpackChunkblobs_app||[]).push([[883],{9616:function(e,t,n){"use strict";n.r(t);var l=n(7690),u=n(2331),a=n(2200),r=n(7294),c=n(2335),o=n(9550);t.default=function(){return r.createElement(r.Fragment,null,r.createElement(c.Z,{title:"404: Not found"}),r.createElement(l.xu,{textAlign:"center",py:"24"},r.createElement(o.Z,null),r.createElement(u.X,null,"404: Not Found"),r.createElement(a.x,{fontSize:"xl",my:5},"You just hit a route that doesn't exist...")))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-cbd81bd0999227748cd4.js.map
