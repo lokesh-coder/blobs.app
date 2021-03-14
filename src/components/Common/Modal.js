@@ -30,7 +30,7 @@ const Modal = ({ title, src, children, actions, size = '2xl' }) => {
       >
         <ModalOverlay background="rgba(78,86,107,0.71)" />
         <ModalContent>
-          <ModalHeader px="10">
+          <ModalHeader px={{ base: '2', lg: '10' }}>
             <Flex align="center">
               <Flex
                 direction={{ base: 'column', lg: 'row' }}
@@ -47,7 +47,7 @@ const Modal = ({ title, src, children, actions, size = '2xl' }) => {
                 onClick={onClose}
                 variant="subtle"
                 pos="relative"
-                right="-20px"
+                right={{ base: '0', lg: '-20px' }}
               >
                 <CloseIcon />
               </Button>
