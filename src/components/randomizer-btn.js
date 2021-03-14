@@ -3,7 +3,7 @@
 import React from 'react';
 import { Button } from '@chakra-ui/react';
 import useSound from 'use-sound';
-import boopSfx from '/assets/spring.mp3';
+import boopSfx from '/static/spring.mp3';
 
 import { createRandomBlob } from '../utilities';
 import { dynamic } from '../state';

@@ -3,7 +3,7 @@
 import { Flex, Spinner, useColorModeValue } from '@chakra-ui/react';
 import React, { useRef, useState } from 'react';
 import * as Patterns from '../patterns';
-import LoadingImg from '/assets/loadingimg.png';
+import LoadingImg from '../images/loadingimg.png';
 
 const Blob = ({
   size,
