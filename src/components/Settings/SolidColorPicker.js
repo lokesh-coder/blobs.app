@@ -21,20 +21,30 @@ const SolidColorPicker = ({ type, color, switchToSolidColor }) => {
     <Ding
       label="Color"
       Icon={PaintIcon}
-      isSelected={type == 'solid'}
+      isSelected={type === 'solid'}
       activeComp={<Box p="4px" rounded="2xl" bg={color} w="1px" />}
     />
   );
 
-  return (
-    <Popover props={{ bg: color }} label="Choose a color" trigger={<Picker />}>
+  const Content = ({ close }) => {
+    const selectAndClose = (value) => {
+      switchToSolidColor(value);
+      close();
+    };
+    return (
       <Box>
-        <Pallette onClick={switchToSolidColor} colors={defaultColors} />
+        <Pallette onClick={selectAndClose} colors={defaultColors} />
         <Divider mb="4" />
         <Box p="3" pt="0">
-          <Input value={color} onEnter={switchToSolidColor} />
+          <Input value={color} onEnter={selectAndClose} />
         </Box>
       </Box>
+    );
+  };
+
+  return (
+    <Popover props={{ bg: color }} label="Choose a color" trigger={<Picker />}>
+      {(close) => <Content close={close} />}
     </Popover>
   );
 };

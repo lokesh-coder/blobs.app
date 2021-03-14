@@ -18,7 +18,7 @@ const initialState = {
   isOutline: false,
   pattern: 'cross',
   image: 'https://source.unsplash.com/5PVXkqt2s9k/500x500',
-  playSound: true,
+  playSound: false,
   savedBlobs: null,
 };
 

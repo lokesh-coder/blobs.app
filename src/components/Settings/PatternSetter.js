@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-wrap-multilines */
-import React, { useState } from 'react';
-import { Box, Text, useColorModeValue } from '@chakra-ui/react';
+import React from 'react';
+import { Box, useColorModeValue } from '@chakra-ui/react';
 import { dynamic } from '../../state';
 import Popover from '../Common/Popover';
 import * as Patterns from '../../patterns';
@@ -63,18 +63,25 @@ const PatternSetter = ({ type, pattern, switchToPattern }) => {
     );
   };
 
+  const Content = ({ close }) => (
+    <Box p="3">
+      {Object.keys(Patterns).map((name) => (
+        <PatternBox
+          key={name}
+          meta={Patterns[name]}
+          clickHandler={(value) => {
+            switchToPattern(value);
+            close();
+          }}
+          isSelected={pattern === name}
+        />
+      ))}
+    </Box>
+  );
+
   return (
     <Popover props={{ bg: 'red' }} label="Set pattern" trigger={<Picker />}>
-      <Box p="3">
-        {Object.keys(Patterns).map((name) => (
-          <PatternBox
-            key={name}
-            meta={Patterns[name]}
-            clickHandler={switchToPattern}
-            isSelected={pattern === name}
-          />
-        ))}
-      </Box>
+      {(close) => <Content close={close} />}
     </Popover>
   );
 };

@@ -15,7 +15,7 @@ const UrlInput = ({ value, onEnter }) => {
         defaultValue={value}
         _focus={{ borderColor: 'primary', boxShadow: '0 0 0 1px #d7819b' }}
         onKeyDown={(e) => {
-          if (e.code !== 'Enter') return;
+          if (e.key !== 'Enter') return;
           const url = e.target.value;
           if (!urlRegex.test(url)) {
             setError('Invalid URL');

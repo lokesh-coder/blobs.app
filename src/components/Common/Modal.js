@@ -31,21 +31,26 @@ const Modal = ({ title, src, children, actions, size = '2xl' }) => {
         <ModalOverlay background="rgba(78,86,107,0.71)" />
         <ModalContent>
           <ModalHeader px="10">
-            <Flex justify="space-between" align="center">
-              <Heading fontSize="xl" variant="main">
-                {title}
-              </Heading>
-              <Flex>
+            <Flex align="center">
+              <Flex
+                direction={{ base: 'column', lg: 'row' }}
+                align="center"
+                justify={{ base: 'center', lg: 'space-between' }}
+                flex="1"
+              >
+                <Heading fontSize="xl" variant="main">
+                  {title}
+                </Heading>
                 <Box>{actions}</Box>
-                <Button
-                  onClick={onClose}
-                  variant="subtle"
-                  pos="relative"
-                  right="-20px"
-                >
-                  <CloseIcon />
-                </Button>
               </Flex>
+              <Button
+                onClick={onClose}
+                variant="subtle"
+                pos="relative"
+                right="-20px"
+              >
+                <CloseIcon />
+              </Button>
             </Flex>
           </ModalHeader>
           <Divider />

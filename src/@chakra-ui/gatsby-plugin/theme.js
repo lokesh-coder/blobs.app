@@ -16,6 +16,9 @@ const theme = extendTheme({
       body: {
         bg: colorMode === 'dark' ? 'blue.800' : 'white',
       },
+      '.chakra-modal__content-container': {
+        p: { base: '2', lg: '0' },
+      },
       '#blobSvg': {
         overflow: 'visible',
       },

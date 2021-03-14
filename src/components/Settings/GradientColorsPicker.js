@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import React from 'react';
 import { Box, Divider, Flex } from '@chakra-ui/react';
 import { dynamic } from '../../state';
@@ -38,23 +39,44 @@ const GradientColorsPicker = ({
       }
     />
   );
+  const Content = ({ close }) => (
+    <Box>
+      <Pallette
+        onClick={(value) => {
+          switchToGradientColors(value);
+          close();
+        }}
+        colors={defaultColors}
+      />
+      <Divider mb="4" />
+      <Box p="3" pt="0">
+        <Flex>
+          <Input
+            value={start}
+            onEnter={(value) => {
+              updateGradientStartColor(value);
+              close();
+            }}
+          />
+          <Divider mx="2" orientation="vertical" />
+          <Input
+            value={end}
+            onEnter={(value) => {
+              updateGradientEndColor(value);
+              close();
+            }}
+          />
+        </Flex>
+      </Box>
+    </Box>
+  );
   return (
     <Popover
       props={{ bgGradient: `linear(to-b, ${start}, ${end})` }}
       label="Gradient colors"
       trigger={<Picker />}
     >
-      <Box>
-        <Pallette onClick={switchToGradientColors} colors={defaultColors} />
-        <Divider mb="4" />
-        <Box p="3" pt="0">
-          <Flex>
-            <Input value={start} onEnter={updateGradientStartColor} />
-            <Divider mx="2" orientation="vertical" />
-            <Input value={end} onEnter={updateGradientEndColor} />
-          </Flex>
-        </Box>
-      </Box>
+      {(close) => <Content close={close} />}
     </Popover>
   );
 };

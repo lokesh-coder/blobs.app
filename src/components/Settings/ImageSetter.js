@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Button } from '@chakra-ui/react';
 import { dynamic } from '../../state';
 import Popover from '../Common/Popover';
 import UrlInput from '../Common/UrlInput';
 import Ding from '../Common/Ding';
-import { ImageIcon, LandscapeIcon } from '../icons';
+import { ImageIcon, LandscapeIcon, RightArrowIcon } from '../icons';
 
 const ImageSetter = ({ type, image, switchToImage }) => {
   const Picker = () => (
@@ -15,16 +15,20 @@ const ImageSetter = ({ type, image, switchToImage }) => {
       activeComp={<LandscapeIcon color="primary" />}
     />
   );
+  const Content = ({ close }) => (
+    <Box p="3" textAlign="center">
+      <UrlInput
+        value={image}
+        onEnter={(value) => {
+          switchToImage(value);
+          close();
+        }}
+      />
+    </Box>
+  );
   return (
     <Popover props={{ bg: 'red' }} label="Set image" trigger={<Picker />}>
-      <Box p="3">
-        <UrlInput
-          value={image}
-          onEnter={(url) => {
-            switchToImage(url);
-          }}
-        />
-      </Box>
+      {(close) => <Content close={close} />}
     </Popover>
   );
 };

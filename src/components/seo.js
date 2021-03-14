@@ -59,7 +59,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: 'og:image',
-          content: '/blobs_app_poster.png',
+          content: 'https://blobs.app/blobs_app_poster.png',
         },
         {
           name: 'twitter:card',
@@ -83,7 +83,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:image',
-          content: '/blobs_app_poster.png',
+          content: 'https://blobs.app/blobs_app_poster.png',
         },
       ].concat(meta)}
     />

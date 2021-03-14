@@ -12,7 +12,7 @@ const Input = ({ value, onEnter }) => (
       defaultValue={value}
       _focus={{ borderColor: 'primary', boxShadow: '0 0 0 1px #d7819b' }}
       onKeyDown={(e) => {
-        if (e.code !== 'Enter') return;
+        if (e.key !== 'Enter') return;
         if (!validateHex(e.target.value)) return;
         onEnter(e.target.value);
       }}
