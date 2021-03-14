@@ -3,7 +3,7 @@
 <br>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/1754676/82777559-18537280-9e6c-11ea-9257-0a24645c91b0.png"  alt="Blobs"></p>
+<img src="https://user-images.githubusercontent.com/1754676/111070745-0c1ecb80-84f9-11eb-9128-fff8b2ab2b40.png"  alt="Blobs"></p>
 
 </h3>
 
@@ -18,28 +18,24 @@
 </pre>
 </div>
 
-### Preview
+<p align="center">
+<img src="https://user-images.githubusercontent.com/1754676/111070755-222c8c00-84f9-11eb-9ac8-27a6bba547a1.png"  alt="Social preview"></p>
 
-![preview](https://user-images.githubusercontent.com/1754676/84493278-20f9d480-acc5-11ea-8667-ee0df8f35442.png)
 
-![preview2](https://user-images.githubusercontent.com/1754676/84492711-3a4e5100-acc4-11ea-942c-37f9cd802fcf.png)
 
-### Blobs for flutter
-
-&nbsp;
-
-<div class="highlight highlight-source-shell">
-<pre>
-<div align="center"><strong >Blobs for flutter</strong></div>
-<div align="center"><a align="center" href="https://pub.dev/packages/blobs">flutter_blobs</a></div>
-</pre>
-</div>
-
-<p float="left">
-  <img width="200" alt="style_custom_color" src="https://user-images.githubusercontent.com/1754676/82777008-6ebfb180-9e6a-11ea-9b85-fcac09cfca38.gif">
-  <img width="200" alt="style_gradient" src="https://user-images.githubusercontent.com/1754676/82777164-f1e10780-9e6a-11ea-8d02-89217cd6e582.png">
-  <img width="200" alt="blobs_with_child" src="https://user-images.githubusercontent.com/1754676/82777157-ef7ead80-9e6a-11ea-9b74-6224cf33d739.png">
-</p>
+### Features
+  - Choose any solid colors
+  - Set gradient colors
+  - Use Patterns
+  - Clip Image
+  - Outlined blob
+  - SVG Code - view/copy/download
+  - Flutter blob code
+  - Save and view blobs
+  - Tiny blob change sound
+  - PWA - Offline support
+  - Custom sharable URL
+  - Dark theme
 
 ### Development
 
