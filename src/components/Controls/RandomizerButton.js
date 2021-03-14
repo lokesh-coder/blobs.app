@@ -5,10 +5,10 @@ import { Button } from '@chakra-ui/react';
 import useSound from 'use-sound';
 import boopSfx from '/static/spring.mp3';
 
-import { createRandomBlob } from '../utilities';
-import { dynamic } from '../state';
+import { createRandomBlob } from '../../utils/blob.utils';
+import { dynamic } from '../../state';
 
-const RandomizerBtn = ({ playSound }) => {
+const RandomizerButton = ({ playSound }) => {
   const [play] = useSound(boopSfx, { volume: 0.5 });
   return (
     <Button
@@ -22,4 +22,4 @@ const RandomizerBtn = ({ playSound }) => {
     </Button>
   );
 };
-export default dynamic(RandomizerBtn, ['playSound']);
+export default dynamic(RandomizerButton, ['playSound']);

@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
-import SEO from '../components/seo';
-import Logo from '../components/Logo';
+import SEO from '../components/SEO';
+import Logo from '../components/Common/Logo';
 
 const NotFoundPage = () => (
   <>

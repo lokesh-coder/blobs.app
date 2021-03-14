@@ -9,7 +9,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
-import { QuestionIcon } from '../icons';
+import { QuestionIcon } from './Icons';
 
 const Hint = ({ text }) => (
   <Popover autoFocus={false}>

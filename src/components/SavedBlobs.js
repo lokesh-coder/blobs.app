@@ -11,8 +11,8 @@ import {
 } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
 import { dynamic } from '../state';
-import Blob from './blob';
-import { TrashIcon } from './icons';
+import Blob from './Blob';
+import { TrashIcon } from './Common/Icons';
 
 const SavedBlobs = ({ savedBlobs = [], deleteBlob, loadBlobs }) => {
   const cardHoverBg = useColorModeValue('gray.100', 'gray.700');

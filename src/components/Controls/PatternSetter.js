@@ -5,7 +5,7 @@ import { dynamic } from '../../state';
 import Popover from '../Common/Popover';
 import * as Patterns from '../../patterns';
 import Ding from '../Common/Ding';
-import { PatternIcon } from '../icons';
+import { PatternIcon } from '../Common/Icons';
 
 const PatternBox = ({ meta, clickHandler, isSelected }) => {
   const patternBg = useColorModeValue('A0AEC0', '4A5568');

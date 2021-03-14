@@ -10,7 +10,7 @@ import React from 'react';
 import { dynamic } from '../../state';
 import Highlight from '../Common/Highlight';
 import Modal from '../Common/Modal';
-import { FlutterIcon, CopyIcon } from '../icons';
+import { FlutterIcon, CopyIcon } from '../Common/Icons';
 
 const FlutterCodeModalButton = ({ edges, growth, seed }) => {
   const ID = `${edges}-${growth}-${seed}`;

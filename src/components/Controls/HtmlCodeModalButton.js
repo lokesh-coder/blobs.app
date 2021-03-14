@@ -5,10 +5,10 @@ import { dynamic } from '../../state';
 import DownloadSVG from '../Common/DownloadSVG';
 import Highlight from '../Common/Highlight';
 import Modal from '../Common/Modal';
-import { HtmlIcon, CopyIcon } from '../icons';
-import { formatCode } from '../../utilities';
+import { HtmlIcon, CopyIcon } from '../Common/Icons';
+import { formatCode } from '../../utils/code.utils';
 
-const HtmlCodeModalButton = ({ seed, edges, growth, svgPath }) => {
+const HtmlCodeModalButton = ({ seed, edges, growth }) => {
   const ID = `${edges}-${growth}-${seed}`;
   const [code, setCode] = useState(null);
 

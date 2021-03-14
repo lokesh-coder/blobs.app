@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import { Link as GatbsyLink } from 'gatsby';
-import { SavedIcon, TwitterIcon, BookmarkIcon } from './icons';
+import { SavedIcon, TwitterIcon, BookmarkIcon } from './Common/Icons';
 import { dynamic } from '../state';
 
 const NavLinks = ({ saveBlob }) => {
@@ -51,9 +51,9 @@ const NavLinks = ({ saveBlob }) => {
 
           <Box as={Text}>
             <Button
-              href="/page-2/"
+              href="/saved-blobs/"
               as={GatbsyLink}
-              to="/page-2"
+              to="/saved-blobs"
               variant="heavy"
               leftIcon={<SavedIcon fontSize="18px" />}
               aria-label="Saved blobs"

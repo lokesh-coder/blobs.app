@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Box, HStack } from '@chakra-ui/react';
-import RandomizerBtn from './randomizer-btn';
-import HtmlCodeModalButton from './Settings/HtmlCodeModalButton';
+import RandomizerBtn from './Controls/RandomizerButton';
+import HtmlCodeModalButton from './Controls/HtmlCodeModalButton';
 import { dynamic } from '../state';
-import FlutterCodeModalButton from './Settings/FlutterCodeModalButton';
+import FlutterCodeModalButton from './Controls/FlutterCodeModalButton';
 
-const Actions = () => (
+const BlobActionBar = () => (
   <Box mt="10">
     <Container centerContent maxW="sm">
       <HStack spacing="24px">
@@ -17,4 +17,4 @@ const Actions = () => (
   </Box>
 );
 
-export default dynamic(Actions);
+export default dynamic(BlobActionBar);

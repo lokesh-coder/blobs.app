@@ -2,7 +2,7 @@ import { CheckCircleIcon } from '@chakra-ui/icons';
 import React from 'react';
 import { dynamic } from '../../state';
 import Ding from '../Common/Ding';
-import { OutlineIcon } from '../icons';
+import { OutlineIcon } from '../Common/Icons';
 
 const OutlineToggleButton = ({ isOutline, toggleOutline }) => (
   <Ding

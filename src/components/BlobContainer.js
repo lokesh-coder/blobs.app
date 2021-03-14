@@ -1,7 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { dynamic } from '../state';
-import { createFixedBlob, createInitialBlob, setBlobTheme } from '../utilities';
-import Blob from './blob';
+import {
+  createFixedBlob,
+  createInitialBlob,
+  setBlobTheme,
+} from '../utils/blob.utils';
+import Blob from './Blob';
 
 const BlobContainer = (props) => {
   const { edges, growth, color, colors, type, isOutline, svgPath } = props;

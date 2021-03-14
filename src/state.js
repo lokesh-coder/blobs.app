@@ -1,7 +1,7 @@
 import createStore from 'redux-zero';
 import { connect as connectStore } from 'redux-zero/react';
 import { bindActions } from 'redux-zero/utils';
-import { deleteBlob, getAllBlobs, saveBlob } from './utils/manageBlobs';
+import { deleteBlob, getAllBlobs, saveBlob } from './utils/storage.utils';
 
 const START_COLOR = '#d1d8e0';
 const END_COLOR = '#4a5568';

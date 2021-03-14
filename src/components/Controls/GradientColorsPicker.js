@@ -6,7 +6,7 @@ import Pallette from '../Common/Pallette';
 import Popover from '../Common/Popover';
 import Input from '../Common/Input';
 import Ding from '../Common/Ding';
-import { PaletteIcon } from '../icons';
+import { PaletteIcon } from '../Common/Icons';
 
 const defaultColors = [
   ['#e96443', '#904e95'],

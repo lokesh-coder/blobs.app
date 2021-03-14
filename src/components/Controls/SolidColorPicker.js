@@ -5,7 +5,7 @@ import Pallette from '../Common/Pallette';
 import Popover from '../Common/Popover';
 import Input from '../Common/Input';
 import Ding from '../Common/Ding';
-import { PaintIcon } from '../icons';
+import { PaintIcon } from '../Common/Icons';
 
 const defaultColors = [
   '#00cec9',

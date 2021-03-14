@@ -3,11 +3,11 @@ import { Link } from 'gatsby';
 
 import { Box, Center, Heading, Text } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 
-import Logo from '../components/Logo';
+import Logo from '../components/Common/Logo';
 import SavedBlobs from '../components/SavedBlobs';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const SecondPage = () => (
   <Layout>

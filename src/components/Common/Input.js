@@ -1,6 +1,6 @@
 import { Box, Input as ChakInput } from '@chakra-ui/react';
 import React from 'react';
-import { validateHex } from '../../utilities';
+import { validateHex } from '../../utils/code.utils';
 
 const Input = ({ value, onEnter }) => (
   <Box key={value}>

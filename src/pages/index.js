@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Box, Heading, Flex } from '@chakra-ui/react';
 
-import SEO from '../components/seo';
-import Settings from '../components/settings';
-import Actions from '../components/actions';
-import Logo from '../components/Logo';
+import SEO from '../components/SEO';
+import BlobSettingsSection from '../components/BlobSettingsSection';
+import BlobActionBar from '../components/BlobActionBar';
+import Logo from '../components/Common/Logo';
 import BlobContainer from '../components/BlobContainer';
 import NavLinks from '../components/NavLinks';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const IndexPage = () => (
   <Layout>
@@ -39,7 +39,7 @@ const IndexPage = () => (
         <Box w={{ base: '100%', lg: 500 }} h={{ lg: 500 }}>
           <BlobContainer />
         </Box>
-        <Actions />
+        <BlobActionBar />
       </Box>
 
       <Box
@@ -61,7 +61,7 @@ const IndexPage = () => (
               Generate blobs
             </Heading>
           </Flex>
-          <Settings />
+          <BlobSettingsSection />
           <NavLinks />
         </Box>
       </Box>

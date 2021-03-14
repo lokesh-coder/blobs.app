@@ -5,7 +5,7 @@ import { Box, Container, useColorModeValue } from '@chakra-ui/react';
 import { Provider } from 'redux-zero/react';
 import { store } from '../state';
 
-import Footer from './Common/Footer';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const theme = useColorModeValue('light', 'dark');

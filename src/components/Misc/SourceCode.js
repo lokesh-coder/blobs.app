@@ -8,7 +8,12 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
-import { GithubIcon, NpmIcon, FlutterIcon, RightArrowIcon } from '../icons';
+import {
+  GithubIcon,
+  NpmIcon,
+  FlutterIcon,
+  RightArrowIcon,
+} from '../Common/Icons';
 
 const SourceCode = () => {
   const links = [

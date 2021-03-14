@@ -4,7 +4,7 @@ import { dynamic } from '../../state';
 import Popover from '../Common/Popover';
 import UrlInput from '../Common/UrlInput';
 import Ding from '../Common/Ding';
-import { ImageIcon, LandscapeIcon, RightArrowIcon } from '../icons';
+import { ImageIcon, LandscapeIcon, RightArrowIcon } from '../Common/Icons';
 
 const ImageSetter = ({ type, image, switchToImage }) => {
   const Picker = () => (
