@@ -35,7 +35,7 @@ export const saveBlob = (store) => {
     id: Date.now(),
     name: generateName({ words: 2 }).spaced,
     // eslint-disable-next-line no-restricted-globals
-    url: `/${location.search}`,
+    url: location.href,
   };
   const allBlobs = getAllBlobs();
   const blobs = [...(allBlobs || []), newData];
