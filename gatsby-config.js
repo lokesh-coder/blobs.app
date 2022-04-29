@@ -1,7 +1,7 @@
 module.exports = {
-  pathPrefix:'/blobs.app/',
+  pathPrefix: '/blobs.app/',
   siteMetadata: {
-    siteUrl: 'https://blobs.app',
+    siteUrl: 'https://lokesh-coder.github.io/blobs.app',
     name: 'blobs.app',
     description: 'Generate beautiful blob shapesfor web and flutter apps',
     descriptionLong:

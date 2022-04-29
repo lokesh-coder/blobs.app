@@ -63,7 +63,7 @@ const NavLinks = ({ saveBlob }) => {
           </Box>
           <Box as={Text}>
             <Button
-              href="http://www.twitter.com/intent/tweet?url=https://blobs.app/&text=Generate%20beautiful%20blob%20shapes%20for%20web%20and%20flutter%20apps"
+              href="http://www.twitter.com/intent/tweet?url=https://lokesh-coder.github.io/blobs.app/&text=Generate%20beautiful%20blob%20shapes%20for%20web%20and%20flutter%20apps"
               target="_blank"
               as={Link}
               variant="heavy"
