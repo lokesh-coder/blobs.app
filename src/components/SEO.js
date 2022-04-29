@@ -48,11 +48,12 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: 'og:url',
-          content: 'https://blobs.app/',
+          content: 'https://lokesh-coder.github.io/blobs.app/',
         },
         {
           property: 'og:image',
-          content: 'https://blobs.app/blobs_app_poster.png',
+          content:
+            'https://lokesh-coder.github.io/blobs.app/blobs_app_poster.png',
         },
         {
           name: 'twitter:card',
@@ -60,7 +61,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:url',
-          content: 'https://blobs.app/',
+          content: 'https://lokesh-coder.github.io/blobs.app/',
         },
         {
           name: 'twitter:creator',
@@ -76,7 +77,8 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:image',
-          content: 'https://blobs.app/blobs_app_poster.png',
+          content:
+            'https://lokesh-coder.github.io/blobs.app/blobs_app_poster.png',
         },
       ].concat(meta)}
     />
