@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix:'/blobs.app/',
   siteMetadata: {
     siteUrl: 'https://blobs.app',
     name: 'blobs.app',
