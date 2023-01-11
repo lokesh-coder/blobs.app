@@ -27,7 +27,7 @@
     "gatsby-remark-prismjs": "^4.0.0",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-rehype": "^2.0.0",
-    "gatsby-transformer-remark": "^3.0.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.0.0",
     "prismjs": "^1.23.0",
     "project-name-generator": "^2.1.9",
